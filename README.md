@@ -35,7 +35,8 @@ DSH 内置「自定义插件市场」能吃的**索引格式 1**，托管在 Git
 
 ## 用起来
 
-`~/.dsh/profiles/desktop/cordis.patch.yml` 里已经写好：
+`~/.dsh/profiles/desktop/cordis.patch.yml` 里已经写好（`fetchTimeoutMs` 是整段唯一的
+非 volatile 字段，官方写入会原样保留）：
 
 ```yaml
 - id: plugin-market
@@ -43,11 +44,25 @@ DSH 内置「自定义插件市场」能吃的**索引格式 1**，托管在 Git
   config:
     indexes:
       - https://raw.githubusercontent.com/Punchact/dsh-market-index/main/index.json
-  ```
+    fetchTimeoutMs: 120000
+```
 
 重启 DSH 后进 **插件 → 发现** 直接浏览、搜索、安装（安装走官方插件流程：确认 → 安装 → 再重启生效）。
 
 本地进程一个都不需要：8787 那个 `serve.mjs` 已于 2026-10-18 关停并删除。
+
+## 索引源只用发现页维护（纪律）
+
+`plugin-market` 的 `indexes` 是 `.volatile()` 字段，官方写入通道是
+**发现页的「索引源」对话框** → `pluginMarket.setIndexes` → `settings.update(entryId)` →
+`configEditor.edit`：带 `package.json.lock` 文件锁、原子替换、URL 规范化校验、
+修订号防过期写。**不要再用文本编辑器直接改这个字段**：那是绕过锁的外部写，
+与 UI 保存若落在同一瞬间会有读改写交错。
+
+- 增删/替换索引源：一律在发现页操作，立即生效，无需重启。
+- `fetchTimeoutMs` 不是 volatile 字段，官方通道改不到，只能用文本编辑；
+  改完要重启。它只在整段第一次配置时动一次，平时不用碰。
+- 写 `fetchTimeoutMs` 时也留意：别和 UI 保存索引源同时进行。
 
 ## 重建并发布
 
@@ -67,8 +82,10 @@ git commit -m "rebuild index"
 git push
 ```
 
-DSH 的 Host 抓索引有 15 秒超时、10 分钟缓存、拒绝重定向——raw URL 直接满足，不用任何转发。
-实测 4 MB 索引拉取约 1.4 秒、解析 10 毫秒，15 秒预算余量充足。
+DSH 的 Host 抓索引有 15 秒默认超时、10 分钟缓存、拒绝重定向——raw URL 直接满足，不用任何转发。
+**注意实际抓取走 `dsh-net-proxy` 的 `proxiedFetch`，默认 `accept-encoding: identity` 不压缩**，
+实测吞吐约 170–190 KB/s，所以 2.55 MiB 的索引需要 10–16 秒，必须靠
+`fetchTimeoutMs: 120000` 兜住（详见上节）。
 `publishTimestamp` 每次重建都会刷新，raw URL 走 CDN，`cacheTtlMs`（10 分钟）之外自然换新。
 
 ## 「已安装」筛选怎么做
