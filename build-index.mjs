@@ -326,10 +326,15 @@ async function main() {
     plugins,
   }
 
-  await writeFile(OUTPUT_PATH, `${JSON.stringify(index, null, 2)}\n`, 'utf8')
+  // 压缩成单行：DSH 的 Host 抓索引时经 dsh-net-proxy 的 proxiedFetch，它默认
+  // accept-encoding: identity（不压缩），4 MB 美化版经代理要 26 秒，超过 Host 默认
+  // 15 秒超时就会报「无法读取此索引」。单行 JSON 省 35%，约 2.6 MB。
+  const serialized = `${JSON.stringify(index)}\n`
+  await writeFile(OUTPUT_PATH, serialized, 'utf8')
   await writeFile(CACHE_PATH, `${JSON.stringify(cache, null, 2)}\n`, 'utf8')
-  const bytes = Buffer.byteLength(JSON.stringify(index))
-  log(`写入 ${OUTPUT_PATH}：${plugins.length} 个插件，约 ${(bytes / 1048576).toFixed(1)} MiB`)
+  log(
+    `写入 ${OUTPUT_PATH}：${plugins.length} 个插件，${(Buffer.byteLength(serialized) / 1048576).toFixed(2)} MiB`,
+  )
 }
 
 main().catch((error) => {
