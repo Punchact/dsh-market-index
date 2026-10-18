@@ -3,7 +3,7 @@
 把 [1024 Store](https://deepseek1024.com/)（`imsai-sh/dsh-1024store`）的公开目录转成
 DSH 内置「自定义插件市场」能吃的**索引格式 1**，托管在 GitHub 上，免常驻。
 
-- 索引文件：`index.json`（**4857 个插件**，约 4.0 MB）
+- 索引文件：`index.json`（**4857 个插件**，单行 JSON，约 2.55 MiB）
 - **索引地址（已配置进 `~/.dsh/profiles/desktop/cordis.patch.yml`）**：
 
   ```
@@ -13,6 +13,25 @@ DSH 内置「自定义插件市场」能吃的**索引格式 1**，托管在 Git
 - 仓库：[Punchact/dsh-market-index](https://github.com/Punchact/dsh-market-index)（Public）
 - 数据来源：`https://deepseek1024.com/api/v2/plugins`（分页 limit=200，全目录 13808 条；
   其中 npm 可安装的 4857 个进索引，纯 Git 源的 7786 条不进——见下「边界」）
+
+## 为什么索引要压到 2.5 MB 以内（重要）
+
+「无法读取此索引」的根因在这里，不是格式问题：
+
+- DSH 的 Host 抓索引走的是 `dsh-net-proxy` 包装过的 `globalThis.fetch`（`proxiedFetch`），
+  它**默认发 `accept-encoding: identity`**——即不请求 gzip。
+- 经本机代理实测吞吐约 **170–190 KB/s**（不走代理直连 raw 会超时，必须走代理）。
+- Host 默认 `fetchTimeoutMs: 15000`，所以 15 秒大约只能拿 **2.5 MB**。
+- 之前的 4.02 MB 美化版需要约 26 秒 → 稳定触发 `plugin-market/fetch-failed`，
+  发现页显示「无法读取此索引」。
+
+对策是两条一起上：
+
+1. 索引**压到 2.55 MiB**（单行 JSON + 描述裁到 120 字符 + homepage/repository 二选一）；
+2. `cordis.patch.yml` 里给 `plugin-market` 加 `fetchTimeoutMs: 120000`，留足余量。
+
+实测：commit 版本 15 秒预算内 10.3 秒拿完；走 `@main`（CDN 可能有旧缓存）约 16 秒，
+所以超时放宽到 120 秒是必要的。
 
 ## 用起来
 
