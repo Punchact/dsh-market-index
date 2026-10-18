@@ -104,6 +104,22 @@ function localized(text, fallback) {
   return out.en === undefined ? fallback : out
 }
 
+/** 按语种限长截断展示文本：中文更紧凑，给 55% 的长度。 */
+function trimText(text, limit) {
+  if (text === null || text === undefined) return undefined
+  if (typeof text === 'string') {
+    return text.length <= limit ? text : `${text.slice(0, limit - 1)}…`
+  }
+  if (typeof text !== 'object') return undefined
+  const out = {}
+  for (const [language, value] of Object.entries(text)) {
+    const budget = language === 'zh' ? Math.round(limit * 0.55) : limit
+    if (value.length <= budget) out[language] = value
+    else out[language] = `${value.slice(0, budget - 1)}…`
+  }
+  return Object.keys(out).length === 0 ? undefined : out
+}
+
 /** 整份目录：v2 分页拉完，按包名归并 npm 可安装的条目。 */
 async function readCatalog() {
   const byName = new Map()
@@ -280,16 +296,22 @@ async function main() {
       ],
     }
     const title = localized(item.title, undefined)
-    if (title !== undefined) plugin.title = title
+    if (title !== undefined) plugin.title = trimText(title, 60)
+    // 描述限长：DSH 的 Host 经 dsh-net-proxy 的 proxiedFetch 抓索引时默认
+    // accept-encoding: identity（不压缩），链路上限约 170–190 KB/s，默认 15 秒
+    // 超时只能容纳约 2.5 MB。描述是索引里最大的可裁字段（占 20%），裁到 120 字符。
     const description = localized(item.description, undefined)
-    if (description !== undefined) plugin.description = description
+    if (description !== undefined) plugin.description = trimText(description, 120)
     if (typeof item.owner === 'string' && item.owner.trim() !== '') plugin.author = item.owner
+    // homepage 与 repository 二选一：repository 更有用（发现页能显示源码仓库），
+    // 且 homepage 在目录里几乎总是同一个 GitHub 地址，重复约 0.4 MB。
     if (typeof item.url === 'string' && /^https?:\/\//.test(item.url)) {
-      plugin.homepage = item.url
       try {
         const parsed = new URL(item.url)
         if (parsed.hostname === 'github.com' && /^\/[^/]+\/[^/]+\/?$/.test(parsed.pathname)) {
           plugin.repository = { url: item.url.replace(/\/$/, '') }
+        } else {
+          plugin.homepage = item.url
         }
       } catch {
         /* ignore malformed homepage */
