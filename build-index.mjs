@@ -1,23 +1,29 @@
 #!/usr/bin/env node
 /**
- * 把 1024 Store（deepseek1024.com）的公开目录转成 DSH 插件市场索引格式 1。
+ * 把 1024 Store（deepseek1024.com）的完整公开目录转成 DSH 插件市场索引格式 1。
  *
- * 数据来源：https://deepseek1024.com/api/v1/plugins （v1 冻结契约，最多 500 条，
- * 只含已发布 npm 包、且 package.json 声明 dsh.bundle 的插件，全部是 npm 安装法）。
+ * 数据来源：https://deepseek1024.com/api/v2/plugins（分页，limit 上限 200，全目录约 13800 条）。
+ * 其中带 npm 安装法的进入索引；纯 GitHub 源的条目不进——索引格式 1 的 git source 要求固定
+ * 40 位 commit，v2 只给分支形式的 spec，补全需要几千次 GitHub API 调用。
  *
- * 输出：同目录 index.json，可直接作为 DSH「设置 → 插件 → 发现 → 添加索引源」的 URL。
+ * 可选：--mark-installed 读本机 DSH profile 的依赖，给匹配上的插件打 `installed` 标签，
+ * 发现页的「标签」菜单因此能筛出已安装项（格式 1 没有专门的 installed 过滤器）。
  *
  * 用法：
- *   node build-index.mjs            # 抓目录 + npm 元数据，写 index.json
- *   node build-index.mjs --offline  # 复用 npm-cache.json，不访问 npm registry
+ *   node build-index.mjs                     # 抓目录 + npm 元数据，写 index.json
+ *   node build-index.mjs --mark-installed    # 同时读本机 profile 打 installed 标签
+ *   node build-index.mjs --offline           # 复用 npm-cache.json，不访问 npm registry
+ *   node build-index.mjs --profile desktop   # 指定要读的 profile（默认 desktop）
  */
 
 import { writeFile, readFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { homedir } from 'node:os'
 
 const HERE = dirname(fileURLToPath(import.meta.url))
-const CATALOG_URL = 'https://deepseek1024.com/api/v1/plugins'
+const CATALOG_BASE = 'https://deepseek1024.com/api/v2/plugins'
+const PAGE_LIMIT = 200
 const CACHE_PATH = join(HERE, 'npm-cache.json')
 const OUTPUT_PATH = join(HERE, 'index.json')
 
@@ -25,16 +31,20 @@ const SEMVER =
   /^(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-(?:(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*)?(?:\+[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*)?$/
 const PACKAGE_NAME = /^(?:@[a-z0-9][a-z0-9._~-]*\/)?[a-z0-9][a-z0-9._~-]*$/
 
-const CONCURRENCY = 8
+const CONCURRENCY = 12
+const LABEL_INSTALLED = { title: { en: 'Installed', zh: '已安装' } }
 
-function log(...args) {
-  console.log(...args)
+function option(name, fallback) {
+  const index = process.argv.indexOf(`--${name}`)
+  return index >= 0 && process.argv[index + 1] !== undefined ? process.argv[index + 1] : fallback
 }
 
-/** 从 install spec 里剥掉可选的 @version / @tag 后缀（scoped 包名本身以 @ 开头）。 */
-function packageNameOf(spec) {
-  const at = spec.indexOf('@', spec.startsWith('@') ? 1 : 0)
-  return at === -1 ? spec : spec.slice(0, at)
+function flag(name) {
+  return process.argv.includes(`--${name}`)
+}
+
+function log(...args) {
+  console.log(new Date().toISOString().slice(11, 19), ...args)
 }
 
 async function fetchJson(url, attempts = 3) {
@@ -49,151 +59,212 @@ async function fetchJson(url, attempts = 3) {
       return await response.json()
     } catch (error) {
       lastError = error
-      if (attempt < attempts) await new Promise((resolve) => setTimeout(resolve, 500 * attempt))
+      if (attempt < attempts) await new Promise((resolve) => setTimeout(resolve, 400 * attempt))
     }
   }
   throw lastError
 }
 
-/** 读 npm registry 元数据里该版本的发布时间与 engines.dsh。失败时返回 undefined。 */
-async function npmFacts(name, version) {
-  try {
-    const document = await fetchJson(`https://registry.npmjs.org/${encodeURIComponent(name)}`)
-    const published = document.time?.[version]
-    const engines = document.versions?.[version]?.engines ?? {}
-    const dshRange = typeof engines.dsh === 'string' ? engines.dsh : undefined
-    return {
-      publishTimestamp: published === undefined ? undefined : Math.floor(Date.parse(published) / 1000),
-      dsh: dshRange,
-    }
-  } catch (error) {
-    log(`  ! ${name}: npm 元数据读取失败（${error.message}），退回 store 的校验时间`)
-    return undefined
-  }
-}
-
 async function mapLimit(items, limit, mapper) {
   const results = new Array(items.length)
   let next = 0
+  let done = 0
   async function worker() {
     while (next < items.length) {
       const index = next
       next += 1
       results[index] = await mapper(items[index], index)
+      done += 1
+      if (done % 250 === 0) log(`  npm 元数据 ${done}/${items.length}`)
     }
   }
   await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker))
   return results
 }
 
+/** 目录条目的 install 命令形如 `dsh plugin --profile web add <spec>`；取回 spec。 */
+function installSpec(command) {
+  if (typeof command !== 'string') return undefined
+  const at = command.lastIndexOf(' add ')
+  return at === -1 ? undefined : command.slice(at + 5).trim()
+}
+
+/** 从 spec 里剥出版本/标签后缀，返回包名（scoped 包名本身以 @ 开头）。 */
+function packageNameOf(spec) {
+  const at = spec.indexOf('@', spec.startsWith('@') ? 1 : 0)
+  return at === -1 ? spec : spec.slice(0, at)
+}
+
+function localized(text, fallback) {
+  if (typeof text === 'string' && text.trim() !== '') return text
+  if (text === null || typeof text !== 'object') return fallback
+  const out = {}
+  if (typeof text.en === 'string' && text.en.trim() !== '') out.en = text.en
+  if (typeof text.zh === 'string' && text.zh.trim() !== '') out.zh = text.zh
+  return out.en === undefined ? fallback : out
+}
+
+/** 整份目录：v2 分页拉完，按包名归并 npm 可安装的条目。 */
+async function readCatalog() {
+  const byName = new Map()
+  let page = 1
+  let totalPages = 1
+  let rows = 0
+  let gitOnly = 0
+  let skipped = 0
+  let categories = []
+  for (;;) {
+    const document = await fetchJson(`${CATALOG_BASE}?page=${String(page)}&limit=${String(PAGE_LIMIT)}`)
+    totalPages = Number(document.totalPages ?? 1)
+    if (page === 1 && Array.isArray(document.categories)) categories = document.categories
+    for (const entry of document.plugins ?? []) {
+      rows += 1
+      const spec = installSpec(entry.install)
+      if (spec === undefined || spec.includes('github:')) {
+        gitOnly += 1
+        continue
+      }
+      const name = packageNameOf(spec)
+      if (!PACKAGE_NAME.test(name)) {
+        skipped += 1
+        continue
+      }
+      const suffix = spec.slice(name.length)
+      const tag = suffix.startsWith('@') ? suffix.slice(1) : undefined
+      const version = tag !== undefined && SEMVER.test(tag) ? tag : undefined
+      const previous = byName.get(name)
+      if (previous !== undefined) {
+        previous.installs = Math.max(previous.installs, entry.installCount ?? 0)
+        continue
+      }
+      byName.set(name, {
+        name,
+        version,
+        category: entry.category,
+        description: entry.description,
+        title: entry.name,
+        owner: entry.owner,
+        url: entry.url,
+        installs: entry.installCount ?? 0,
+        stars: entry.stars ?? 0,
+        added: entry.added,
+      })
+    }
+    if (page >= totalPages) break
+    page += 1
+    if (page % 10 === 0) log(`  目录 ${page}/${totalPages} 页，累计 ${rows} 条`)
+  }
+  return { byName, rows, gitOnly, skipped, categories }
+}
+
+/** npm 元数据：目标版本、发布时间、engines.dsh，带 ETag 以便增量重建。 */
+async function npmFacts(name, wantedVersion, cached, offline) {
+  const stale =
+    cached?.etag === undefined ||
+    (wantedVersion !== undefined && cached.version !== wantedVersion)
+  if (offline || !stale) return cached
+
+  const encoded = name.startsWith('@') ? `@${encodeURIComponent(name.slice(1))}` : name
+  const headers = { accept: 'application/json' }
+  if (cached?.etag !== undefined) headers['if-none-match'] = cached.etag
+  try {
+    const response = await fetch(`https://registry.npmjs.org/${encoded}`, {
+      headers,
+      signal: AbortSignal.timeout(30_000),
+    })
+    if (response.status === 304) return cached
+    if (!response.ok) return cached
+    const etag = response.headers.get('etag') ?? undefined
+    const document = await response.json()
+    const version = wantedVersion ?? document['dist-tags']?.latest
+    if (typeof version !== 'string' || !SEMVER.test(version)) return cached
+    const published = document.time?.[version]
+    const engines = document.versions?.[version]?.engines ?? {}
+    return {
+      version,
+      etag,
+      publishTimestamp:
+        typeof published === 'string' && Number.isFinite(Date.parse(published))
+          ? Math.floor(Date.parse(published) / 1000)
+          : undefined,
+      dsh: typeof engines.dsh === 'string' ? engines.dsh : undefined,
+    }
+  } catch {
+    return cached
+  }
+}
+
 async function readCache() {
   try {
-    return JSON.parse(await readFile(CACHE_PATH, 'utf8'))
+    const parsed = JSON.parse(await readFile(CACHE_PATH, 'utf8'))
+    return parsed !== null && typeof parsed === 'object' ? parsed : {}
   } catch {
     return {}
   }
 }
 
-function localizedDescription(description) {
-  if (typeof description === 'string' && description.trim() !== '') return description
-  if (description === null || typeof description !== 'object') return undefined
-  const text = {}
-  if (typeof description.en === 'string' && description.en.trim() !== '') text.en = description.en
-  if (typeof description.zh === 'string' && description.zh.trim() !== '') text.zh = description.zh
-  return text.en === undefined ? undefined : text
-}
-
-function isGithubRepoUrl(url) {
+/** 本机 profile 里已安装的包名：dependencies 与 dsh.profile.bundles 的并集。 */
+async function readInstalled(profileName) {
+  const profilePath = join(homedir(), '.dsh', 'profiles', profileName, 'package.json')
   try {
-    const parsed = new URL(url)
-    return (
-      (parsed.protocol === 'https:' || parsed.protocol === 'http:') &&
-      parsed.hostname === 'github.com' &&
-      /^\/[^/]+\/[^/]+\/?$/.test(parsed.pathname)
-    )
+    const document = JSON.parse(await readFile(profilePath, 'utf8'))
+    const names = new Set()
+    // 只认 dependencies：bundles 里的官方组合包由 DSH 自己标「随 DSH 提供」，不算用户装的。
+    for (const [name, spec] of Object.entries(document.dependencies ?? {})) {
+      if (typeof spec === 'string' && (spec.startsWith('link:') || spec.startsWith('file:'))) continue
+      if (!name.includes(':')) names.add(name)
+    }
+    return names
   } catch {
-    return false
+    return new Set()
   }
 }
 
 async function main() {
-  const offline = process.argv.includes('--offline')
+  const offline = flag('offline')
+  const markInstalled = flag('mark-installed')
+  const profileName = option('profile', 'desktop')
 
-  log(`抓取目录 ${CATALOG_URL} …`)
-  const catalog = await fetchJson(CATALOG_URL)
-  const packages = Array.isArray(catalog.packages) ? catalog.packages : []
-  log(`目录条目 ${packages.length} 条（catalogTotal=${catalog.meta?.catalogTotal ?? '?'}）`)
+  log(`抓取目录 ${CATALOG_BASE} …`)
+  const catalog = await readCatalog()
+  log(
+    `目录 ${catalog.rows} 条：npm 可安装 ${catalog.byName.size} 个唯一包名，纯 Git 源 ${catalog.gitOnly} 条，非法 ${catalog.skipped} 条`,
+  )
 
-  // 分类声明：索引里用到的每个 category id 都必须先在 metadata.categories 里声明。
   const categories = {}
-  for (const category of Array.isArray(catalog.categories) ? catalog.categories : []) {
+  for (const category of catalog.categories) {
     if (typeof category.id !== 'string' || category.id === '') continue
-    const title = {}
-    if (typeof category.en === 'string' && category.en !== '') title.en = category.en
-    if (typeof category.zh === 'string' && category.zh !== '') title.zh = category.zh
-    if (title.en === undefined) title.en = category.id
-    categories[category.id] = { title }
-  }
-
-  // 每个插件挑一条 npm 安装法；优先 published_package（当前口径），并去重包名。
-  const picked = new Map()
-  for (const entry of packages) {
-    const methods = Array.isArray(entry.installMethods) ? entry.installMethods : []
-    const npmMethods = methods.filter(
-      (method) => method.kind === 'npm' && typeof method.spec === 'string' && method.spec !== '',
-    )
-    if (npmMethods.length === 0) continue
-    const method =
-      npmMethods.find((candidate) => candidate.code === 'published_package') ?? npmMethods[0]
-    const name = packageNameOf(method.spec)
-    if (!PACKAGE_NAME.test(name)) continue
-    const version = typeof method.revision === 'string' && SEMVER.test(method.revision) ? method.revision : undefined
-    const previous = picked.get(name)
-    if (previous !== undefined) {
-      previous.installCount = Math.max(previous.installCount, entry.installCount ?? 0)
-      continue
+    categories[category.id] = {
+      title: localized({ en: category.en, zh: category.zh }, { en: category.id }),
     }
-    picked.set(name, { entry, method, name, version, installCount: entry.installCount ?? 0 })
   }
-  log(`可转换条目 ${picked.size} 个（npm 安装法去重后）`)
 
-  const cache = offline ? await readCache() : {}
-  const queue = [...picked.values()]
-  let done = 0
+  const installed = markInstalled ? await readInstalled(profileName) : new Set()
+  if (markInstalled) log(`本机 profile "${profileName}" 已安装 ${installed.size} 个包`)
+
+  const cache = await readCache()
+  const queue = [...catalog.byName.values()]
   const facts = await mapLimit(queue, CONCURRENCY, async (item) => {
-    const cached = cache[item.name]
-    let value = cached
-    if (!offline && (cached === undefined || (item.version !== undefined && cached.version !== item.version))) {
-      const fresh = await npmFacts(item.name, item.version ?? '')
-      if (fresh !== undefined) {
-        value = { version: item.version, ...fresh }
-        cache[item.name] = value
-      }
-    }
-    done += 1
-    if (done % 50 === 0) log(`  npm 元数据 ${done}/${queue.length}`)
+    const value = await npmFacts(item.name, item.version, cache[item.name], offline)
+    if (value !== undefined && value.version !== undefined) cache[item.name] = value
     return value
   })
-
-  const store = (catalog.meta?.generatedAt ?? catalog.meta?.updated) || undefined
 
   const plugins = []
   for (let index = 0; index < queue.length; index += 1) {
     const item = queue[index]
-    const { entry } = item
     const fact = facts[index]
     const version = item.version ?? fact?.version
     if (typeof version !== 'string' || !SEMVER.test(version)) continue
 
-    const checkedAt = item.method.checkedAt
     const fallback =
-      typeof checkedAt === 'string' && Number.isFinite(Date.parse(checkedAt))
-        ? Math.floor(Date.parse(checkedAt) / 1000)
-        : store === undefined
-          ? 0
-          : Math.floor(Date.parse(store) / 1000)
+      typeof item.added === 'string' && Number.isFinite(Date.parse(item.added))
+        ? Math.floor(Date.parse(item.added) / 1000)
+        : Math.floor(Date.now() / 1000)
     const publishTimestamp =
-      Number.isInteger(fact?.publishTimestamp) && fact.publishTimestamp > 0 ? fact.publishTimestamp : fallback
+      Number.isInteger(fact?.publishTimestamp) && fact.publishTimestamp > 0
+        ? fact.publishTimestamp
+        : fallback
 
     const plugin = {
       name: item.name,
@@ -208,76 +279,57 @@ async function main() {
         },
       ],
     }
-
-    const title = typeof entry.name === 'string' && entry.name.trim() !== '' ? entry.name : undefined
+    const title = localized(item.title, undefined)
     if (title !== undefined) plugin.title = title
-    const description = localizedDescription(entry.description)
+    const description = localized(item.description, undefined)
     if (description !== undefined) plugin.description = description
-    if (typeof entry.owner === 'string' && entry.owner.trim() !== '') plugin.author = entry.owner
-    if (typeof entry.url === 'string' && /^https?:\/\//.test(entry.url)) {
-      plugin.homepage = entry.url
-      if (isGithubRepoUrl(entry.url)) plugin.repository = { url: entry.url.replace(/\/$/, '') }
+    if (typeof item.owner === 'string' && item.owner.trim() !== '') plugin.author = item.owner
+    if (typeof item.url === 'string' && /^https?:\/\//.test(item.url)) {
+      plugin.homepage = item.url
+      try {
+        const parsed = new URL(item.url)
+        if (parsed.hostname === 'github.com' && /^\/[^/]+\/[^/]+\/?$/.test(parsed.pathname)) {
+          plugin.repository = { url: item.url.replace(/\/$/, '') }
+        }
+      } catch {
+        /* ignore malformed homepage */
+      }
     }
-    const metadata = { category: undefined, keywords: [], labels: [], sortKeys: {} }
-    if (typeof entry.category === 'string' && Object.hasOwn(categories, entry.category)) {
-      metadata.category = entry.category
+    const metadata = { keywords: [], labels: [], sortKeys: { installs: item.installs, stars: item.stars } }
+    if (typeof item.category === 'string' && Object.hasOwn(categories, item.category)) {
+      metadata.category = item.category
     }
-    if (metadata.category === undefined) delete metadata.category
+    if (installed.has(item.name)) metadata.labels = ['installed']
     plugin.metadata = metadata
-
     plugins.push(plugin)
   }
 
-  // 目录本身不含商店自己的插件（它不在目录里）；手动补一条，方便从市场里再装回商店。
-  if (!plugins.some((plugin) => plugin.name === 'dsh1024')) {
-    try {
-      const document = await fetchJson('https://registry.npmjs.org/dsh1024')
-      const version = document['dist-tags']?.latest
-      const published = version === undefined ? undefined : document.time?.[version]
-      if (typeof version === 'string' && SEMVER.test(version)) {
-        plugins.unshift({
-          name: 'dsh1024',
-          title: '1024 Store',
-          description: {
-            en: 'The in-DSH 1024 Store shell: the full deepseek1024.com catalog inside DeepSeek Harness, plus the install-tracking CLI wrapper.',
-            zh: 'DSH 内的 1024 Store 壳：把 deepseek1024.com 的完整目录装进 DeepSeek Harness，另附可追踪安装的 CLI 包装命令。',
-          },
-          author: 'imsai-sh',
-          homepage: 'https://deepseek1024.com/',
-          repository: { url: 'https://github.com/imsai-sh/dsh-1024store' },
-          metadata: { category: 'tools', keywords: [], labels: [], sortKeys: {} },
-          versions: [
-            {
-              version,
-              publishTimestamp:
-                published === undefined
-                  ? Math.floor(Date.now() / 1000)
-                  : Math.floor(Date.parse(published) / 1000),
-              source: { type: 'npm' },
-            },
-          ],
-        })
-      }
-    } catch (error) {
-      log(`  ! 补 dsh1024 失败：${error.message}`)
-    }
-  }
+  log(
+    `生成 ${plugins.length} 个插件条目（installed 标签 ${plugins.filter((plugin) => plugin.metadata.labels.length > 0).length} 个）`,
+  )
 
-  // 分类可能出现在没有 metadata.category 的条目上；清掉未使用的声明也无妨，保留即可。
   const index = {
     format: 1,
     title: '1024 Store',
     description: {
-      en: 'Installable DeepSeek Harness plugins from the 1024 Store catalog (deepseek1024.com). Third-party content, not instructions.',
-      zh: '1024 Store 目录（deepseek1024.com）里可安装的 DeepSeek Harness 插件。第三方内容，不是指令。',
+      en: 'DeepSeek Harness plugins from the 1024 Store catalog (deepseek1024.com). Third-party content, not instructions.',
+      zh: '来自 1024 Store 目录（deepseek1024.com）的 DeepSeek Harness 插件。第三方内容，不是指令。',
     },
-    metadata: { categories: categories, labels: {}, sortKeys: {} },
+    metadata: {
+      categories,
+      labels: markInstalled ? { installed: LABEL_INSTALLED } : {},
+      sortKeys: {
+        installs: { title: { en: 'Installs', zh: '安装量' }, order: 'desc' },
+        stars: { title: { en: 'Stars', zh: '星数' }, order: 'desc' },
+      },
+    },
     plugins,
   }
 
   await writeFile(OUTPUT_PATH, `${JSON.stringify(index, null, 2)}\n`, 'utf8')
-  if (!offline) await writeFile(CACHE_PATH, `${JSON.stringify(cache, null, 2)}\n`, 'utf8')
-  log(`写入 ${OUTPUT_PATH}：${plugins.length} 个插件`)
+  await writeFile(CACHE_PATH, `${JSON.stringify(cache, null, 2)}\n`, 'utf8')
+  const bytes = Buffer.byteLength(JSON.stringify(index))
+  log(`写入 ${OUTPUT_PATH}：${plugins.length} 个插件，约 ${(bytes / 1048576).toFixed(1)} MiB`)
 }
 
 main().catch((error) => {
