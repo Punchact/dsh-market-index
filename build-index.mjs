@@ -173,12 +173,14 @@ async function readCatalog() {
   return { byName, rows, gitOnly, skipped, categories }
 }
 
-/** npm 元数据：目标版本、发布时间、engines.dsh，带 ETag 以便增量重建。 */
+/** npm 元数据：目标版本、发布时间、engines.dsh，带 ETag 以便增量重建。
+ *
+ * 注意：在线重建时**必须**每次都发条件请求（If-None-Match），不能因为缓存里已有
+ * etag 就跳过——目录的 install 命令从不钉版本，`wantedVersion` 几乎总是 undefined，
+ * 一旦短路返回缓存，就永远看不到 npm 上的新版本。304 命中时响应体几乎为零，代价很低。
+ */
 async function npmFacts(name, wantedVersion, cached, offline) {
-  const stale =
-    cached?.etag === undefined ||
-    (wantedVersion !== undefined && cached.version !== wantedVersion)
-  if (offline || !stale) return cached
+  if (offline) return cached
 
   const encoded = name.startsWith('@') ? `@${encodeURIComponent(name.slice(1))}` : name
   const headers = { accept: 'application/json' }
@@ -188,11 +190,17 @@ async function npmFacts(name, wantedVersion, cached, offline) {
       headers,
       signal: AbortSignal.timeout(30_000),
     })
-    if (response.status === 304) return cached
+    if (response.status === 304) {
+      // 包没变，但目录可能钉了版本（少见）；以目录为准。
+      if (wantedVersion !== undefined && cached.version !== wantedVersion) {
+        return { ...cached, version: wantedVersion }
+      }
+      return cached
+    }
     if (!response.ok) return cached
     const etag = response.headers.get('etag') ?? undefined
     const document = await response.json()
-    const version = wantedVersion ?? document['dist-tags']?.latest
+    const version = wantedVersion ?? document['dist-tags']?.latest ?? cached?.version
     if (typeof version !== 'string' || !SEMVER.test(version)) return cached
     const published = document.time?.[version]
     const engines = document.versions?.[version]?.engines ?? {}

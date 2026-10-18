@@ -360,9 +360,9 @@
     "dsh": ">=0.0.1-0 || >=0.1.0-rc.2 || >=0.1.1-rc.1 || >=0.1.2-alpha.2 || >=0.1.2-rc.1 || >=0.1.5-rc.1 || >=0.1.5-rc.2 || >=0.2.0-rc.1"
   },
   "@liustack/modsearch": {
-    "version": "5.10.9",
-    "etag": "W/\"7643c67ff293f5d12fc3393720853edf\"",
-    "publishTimestamp": 1792311858
+    "version": "5.10.10",
+    "etag": "W/\"26b3e19ad8e83351bdb3df332d204871\"",
+    "publishTimestamp": 1792340701
   },
   "dshmarketplace-plugin": {
     "version": "0.2.0",
@@ -426,9 +426,9 @@
     "publishTimestamp": 1788098742
   },
   "dsh-working-activity": {
-    "version": "0.5.1",
-    "etag": "W/\"e7028c8afd9a00b0319bc13b33b32408\"",
-    "publishTimestamp": 1790457876
+    "version": "0.6.0",
+    "etag": "W/\"26f7ee2cd4d5ce74e6ed6131ac8ac18c\"",
+    "publishTimestamp": 1792341316
   },
   "dsh-thoughtdag": {
     "version": "0.5.19",
@@ -621,9 +621,9 @@
     "publishTimestamp": 1787158008
   },
   "ds-harness-remote": {
-    "version": "0.5.12",
-    "etag": "W/\"97f80660caf23eeb7625243058fac792\"",
-    "publishTimestamp": 1792305247
+    "version": "0.5.13",
+    "etag": "W/\"c1c1be6ade86e2469777186c3ea68d3b\"",
+    "publishTimestamp": 1792343625
   },
   "@zseven-w/dsh-ios": {
     "version": "0.1.0-rc.10",
@@ -721,9 +721,9 @@
     "publishTimestamp": 1792241036
   },
   "dsh-auto-review": {
-    "version": "0.13.5",
-    "etag": "W/\"687a127b456a825f14c427c594b5ed4a\"",
-    "publishTimestamp": 1792337165,
+    "version": "0.13.7",
+    "etag": "W/\"ccdb3133452da65800a15340d01a6bce\"",
+    "publishTimestamp": 1792347084,
     "dsh": ">=0.2.1-0 <0.3.0"
   },
   "dsh-work-x": {
@@ -737,9 +737,9 @@
     "publishTimestamp": 1791900071
   },
   "dsh-industry-research": {
-    "version": "0.3.22",
-    "etag": "W/\"c49dbfbb0876f5bf11c4c9276fc1178d\"",
-    "publishTimestamp": 1792333282,
+    "version": "0.3.23",
+    "etag": "W/\"5879ecf2cd8e87ce7e8aa9348e11a1c8\"",
+    "publishTimestamp": 1792347767,
     "dsh": ">=0.2.1-0 <0.3.0"
   },
   "dsh-popout-sidebar": {
@@ -748,15 +748,15 @@
     "publishTimestamp": 1787244889
   },
   "dsh-research-report": {
-    "version": "0.3.24",
-    "etag": "W/\"4cef29610694a7a420e80e0339ddbc2f\"",
-    "publishTimestamp": 1792333472,
+    "version": "0.3.27",
+    "etag": "W/\"8a30ef2f7375e7e123754c88602706b5\"",
+    "publishTimestamp": 1792342687,
     "dsh": ">=0.1.6-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
   },
   "dsh-skill-mcp-panel": {
-    "version": "2.3.0",
-    "etag": "W/\"4fab7305b1a69d963c5104266ca57d99\"",
-    "publishTimestamp": 1792330356
+    "version": "2.3.1",
+    "etag": "W/\"fb5492f7eebf4af123741fce3039b9e9\"",
+    "publishTimestamp": 1792347700
   },
   "dsh-tokenledger": {
     "version": "0.1.0",
@@ -810,6 +810,7 @@
   },
   "dsh-fylar-office-editor": {
     "version": "0.1.2",
+    "etag": "W/\"ccfded621a4ecb440accf0fef2e3913a\"",
     "publishTimestamp": 1788866092
   },
   "@wenbin_wb/dsh-bridge": {
@@ -829,9 +830,9 @@
     "dsh": ">=0.2.0-rc.2 <0.3.0 || 0.2.1-rc.1 || 0.2.1-rc.2"
   },
   "dsh-codex-subscription": {
-    "version": "3.0.1",
-    "etag": "W/\"92e9a396461060655ec9a4772bb14c7c\"",
-    "publishTimestamp": 1792303188
+    "version": "3.1.1",
+    "etag": "W/\"cda79765957096222854ea92786089b2\"",
+    "publishTimestamp": 1792354965
   },
   "@zseven-w/dsh-openpencil": {
     "version": "0.1.0-rc.13",
@@ -921,9 +922,9 @@
     "publishTimestamp": 1787913105
   },
   "dsh-connect-workbuddy": {
-    "version": "4.9.0",
-    "etag": "W/\"7b734ed72a3bc11c971ecee1417d25d6\"",
-    "publishTimestamp": 1792337658
+    "version": "4.9.2",
+    "etag": "W/\"e17ca7cbfed859c3d3661f0dfe7835e7\"",
+    "publishTimestamp": 1792351698
   },
   "dsh-status-rotator": {
     "version": "0.37.0",
@@ -1061,9 +1062,9 @@
     "dsh": ">=0.1.1-rc.2 <0.3.0"
   },
   "dsh-connect-trae": {
-    "version": "3.10.0",
-    "etag": "W/\"795d935bc6cbc52f70c3500f9a1ea9dd\"",
-    "publishTimestamp": 1792334575
+    "version": "3.10.1",
+    "etag": "W/\"cb6b41ada5bb27fbe741c47cfa52757f\"",
+    "publishTimestamp": 1792345755
   },
   "dsh-personal-center": {
     "version": "1.1.2",
@@ -1104,9 +1105,9 @@
     "dsh": ">=0.1.2-alpha.4 <0.3.0-0"
   },
   "@dickpy/dsh-imagegen": {
-    "version": "1.8.3",
-    "etag": "W/\"0b2853dc54946384bc66f1887fa457d4\"",
-    "publishTimestamp": 1792327773
+    "version": "1.9.0",
+    "etag": "W/\"d24f38d431bc2619cd1b616feaf72013\"",
+    "publishTimestamp": 1792341255
   },
   "dsh-video-lens": {
     "version": "0.3.2",
@@ -1260,9 +1261,9 @@
     "publishTimestamp": 1792241106
   },
   "dsh-mcp-panel": {
-    "version": "0.6.28",
-    "etag": "W/\"4461369f4bca47bdcfd8230b205396d3\"",
-    "publishTimestamp": 1792328144,
+    "version": "0.6.29",
+    "etag": "W/\"0aff3f84e83526f83d3917609ad89daf\"",
+    "publishTimestamp": 1792343431,
     "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
   },
   "@kenz1117/dsh-ui-usage-billing": {
@@ -1353,9 +1354,9 @@
     "publishTimestamp": 1789242971
   },
   "huaweicloud-devkit": {
-    "version": "1.1.8",
-    "etag": "W/\"438b94e70e4444c15b0b03db8ea1e4aa\"",
-    "publishTimestamp": 1791810168
+    "version": "1.1.9",
+    "etag": "W/\"686b264faeb965c67054e6582b7b9da2\"",
+    "publishTimestamp": 1792347811
   },
   "dsh-taskboard": {
     "version": "0.9.1",
@@ -1394,9 +1395,9 @@
     "publishTimestamp": 1792332363
   },
   "@mstar-harness/dsh": {
-    "version": "4.0.2",
-    "etag": "W/\"e4f633604c1a4c14c5c368d81e5c2779\"",
-    "publishTimestamp": 1792299285
+    "version": "4.0.3",
+    "etag": "W/\"1e0f400d54941da60d4ebb04ad286ac7\"",
+    "publishTimestamp": 1792341308
   },
   "@zenx0x/allinflash": {
     "version": "0.2.0",
@@ -1485,9 +1486,9 @@
     "publishTimestamp": 1791607821
   },
   "dsh-better-reasoning-effort": {
-    "version": "0.5.3",
-    "etag": "W/\"29b197da5b9a573fdbd6307f042fcf4e\"",
-    "publishTimestamp": 1791915023
+    "version": "0.5.4",
+    "etag": "W/\"3688e3a6644b3caea6fde5ea225e9995\"",
+    "publishTimestamp": 1792345807
   },
   "@vlln/plugin-console": {
     "version": "0.1.0",
@@ -1625,9 +1626,9 @@
     "publishTimestamp": 1789012232
   },
   "dsh-plugin-guide": {
-    "version": "0.3.35",
-    "etag": "W/\"f942c71b97e611cda743c05cb603648f\"",
-    "publishTimestamp": 1792316238,
+    "version": "0.3.37",
+    "etag": "W/\"5c0d0aa9303965f21337141773a9d3ef\"",
+    "publishTimestamp": 1792347323,
     "dsh": ">=0.2.1-0 <0.3.0"
   },
   "prts-terrarchive": {
@@ -1797,9 +1798,9 @@
     "publishTimestamp": 1787826549
   },
   "dsh-computer-use-win": {
-    "version": "0.4.2",
-    "etag": "W/\"dc2be136d67c3010fe732d57cf1a57f7\"",
-    "publishTimestamp": 1792331496
+    "version": "0.4.3",
+    "etag": "W/\"0e572f50cc357be1e507684d044d7436\"",
+    "publishTimestamp": 1792346729
   },
   "dsh-design-qa": {
     "version": "0.1.4",
@@ -2000,9 +2001,9 @@
     "publishTimestamp": 1786926046
   },
   "dsh-recall-plugin": {
-    "version": "2.4.15",
-    "etag": "W/\"8a4ae7dc97638f166deca5c7c58bbd4c\"",
-    "publishTimestamp": 1792303240
+    "version": "2.4.16",
+    "etag": "W/\"2aca75c13869649ddfde15f3077b3afc\"",
+    "publishTimestamp": 1792340145
   },
   "@jiyr0119/dsh-workspace-explorer": {
     "version": "0.10.0",
@@ -2045,9 +2046,9 @@
     "publishTimestamp": 1787673567
   },
   "dsh-gitbash-shell": {
-    "version": "0.40.5",
-    "etag": "W/\"8788fd487fd4c076a6069461e8c835d3\"",
-    "publishTimestamp": 1792274619,
+    "version": "0.42.1",
+    "etag": "W/\"9be7a386d8a1d8b8c40dc7a4ae1c9f86\"",
+    "publishTimestamp": 1792344766,
     "dsh": ">=0.1.7-rc"
   },
   "dsh-share": {
@@ -2062,9 +2063,9 @@
     "dsh": ">=0.1.0-rc.6"
   },
   "@dely0/dsh-personal-workbench": {
-    "version": "1.16.5",
-    "etag": "W/\"e59a5d9bf31c1019cb4dbd13461625b8\"",
-    "publishTimestamp": 1791204716
+    "version": "1.17.0",
+    "etag": "W/\"452bfd3d429ae163784bf3a1d789f20b\"",
+    "publishTimestamp": 1792350368
   },
   "dsh-zotero": {
     "version": "0.12.1",
@@ -2151,9 +2152,9 @@
     "publishTimestamp": 1792258537
   },
   "@goodandready/dsh-russian-lang": {
-    "version": "0.3.49",
-    "etag": "W/\"e238ebb3a7b6d4504e4eb243df0c7b44\"",
-    "publishTimestamp": 1792327860,
+    "version": "0.4.0",
+    "etag": "W/\"f5ce0f0b26058bdf934d7d8a47afc4ee\"",
+    "publishTimestamp": 1792344432,
     "dsh": "^0.2.0-rc.2"
   },
   "@cerbur/clutch-dsh-fireworks": {
@@ -2517,9 +2518,9 @@
     "publishTimestamp": 1791362518
   },
   "dsh-checkpoint-rewind": {
-    "version": "0.6.29",
-    "etag": "W/\"3d895b09b7f3a2c3bd37c840bdd289ca\"",
-    "publishTimestamp": 1792315733,
+    "version": "0.6.31",
+    "etag": "W/\"3b63ac84bed118f2fd733b4d0cd8d536\"",
+    "publishTimestamp": 1792349401,
     "dsh": ">=0.2.1-0 <0.3.0"
   },
   "@canglongcl/dsh-web-review": {
@@ -2658,9 +2659,9 @@
     "publishTimestamp": 1789211306
   },
   "dsh-defend": {
-    "version": "0.3.23",
-    "etag": "W/\"2ea587c97198100eed40cccbc9f06229\"",
-    "publishTimestamp": 1792332572,
+    "version": "0.3.24",
+    "etag": "W/\"46f90e868454e0ba37b619f834daa2b9\"",
+    "publishTimestamp": 1792348653,
     "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
   },
   "@wingsky-1/dsh-provider-usage": {
@@ -3020,9 +3021,9 @@
     "publishTimestamp": 1792251768
   },
   "dsh-session-sync": {
-    "version": "0.2.28",
-    "etag": "W/\"86a947a01affceb337a265f6a49bec4a\"",
-    "publishTimestamp": 1792336310,
+    "version": "0.2.29",
+    "etag": "W/\"8fddc440796087169bf6c4dc180d7938\"",
+    "publishTimestamp": 1792344841,
     "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
   },
   "dsh-wechat": {
@@ -3070,9 +3071,9 @@
     "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
   },
   "dsh-better-workspace": {
-    "version": "0.30.1",
-    "etag": "W/\"c8aa41ddc249d562dbd30b7611152bc9\"",
-    "publishTimestamp": 1792272254,
+    "version": "0.30.2",
+    "etag": "W/\"f53e05f1dbe71a60860deb8cca2acf87\"",
+    "publishTimestamp": 1792346505,
     "dsh": ">=0.1.6-alpha.2"
   },
   "@michengai/dsh-btw": {
@@ -3096,9 +3097,9 @@
     "publishTimestamp": 1789659012
   },
   "dsh-click": {
-    "version": "0.3.22",
-    "etag": "W/\"0d38857370af5064792ab783248755af\"",
-    "publishTimestamp": 1792332652,
+    "version": "0.3.23",
+    "etag": "W/\"32a4bc4652a9ce06f15a571101246087\"",
+    "publishTimestamp": 1792344443,
     "dsh": ">=0.2.1-0 <0.3.0"
   },
   "dsh-clawrouter": {
@@ -3665,9 +3666,9 @@
     "publishTimestamp": 1786949631
   },
   "dsh-talk": {
-    "version": "0.3.24",
-    "etag": "W/\"61758bafaec3a515924667b5d93e86c5\"",
-    "publishTimestamp": 1792332898,
+    "version": "0.3.25",
+    "etag": "W/\"a876a3770194cee218c4a5dcf7c514a2\"",
+    "publishTimestamp": 1792342886,
     "dsh": ">=0.2.1-0 <0.3.0"
   },
   "@alib8b8/dsh-plugin-aflare": {
@@ -3696,9 +3697,9 @@
     "publishTimestamp": 1789403337
   },
   "lunheng-article-pipeline": {
-    "version": "19.17.0",
-    "etag": "W/\"815ff0002228ab5cbcebde7d93c74a2d\"",
-    "publishTimestamp": 1792335801
+    "version": "19.18.1",
+    "etag": "W/\"ff9ea40987bf348442f873fdf882ee1e\"",
+    "publishTimestamp": 1792342358
   },
   "@lyhue1991/dsh-soup": {
     "version": "0.7.2",
@@ -3986,9 +3987,9 @@
     "publishTimestamp": 1786887341
   },
   "dsh-sidenote": {
-    "version": "0.6.0",
-    "etag": "W/\"5dccd543ab61c26ca8b3a4297feea872\"",
-    "publishTimestamp": 1792267787,
+    "version": "0.6.1",
+    "etag": "W/\"521786e5a884c3f07acdb25b1b3472e3\"",
+    "publishTimestamp": 1792343616,
     "dsh": ">=0.1.1-rc.1 <0.2.0 || =0.2.0-rc.2"
   },
   "dsh-router-core": {
@@ -4032,10 +4033,10 @@
     "publishTimestamp": 1789129042
   },
   "@winteries/dsh-turn-fold": {
-    "version": "0.7.0",
-    "etag": "W/\"8124eb98fa74d2bcfa261cdfe0a2a81e\"",
-    "publishTimestamp": 1791623051,
-    "dsh": ">=0.1.7-rc.1 <=0.2.0-rc.2"
+    "version": "0.7.1",
+    "etag": "W/\"e8202c5f2b6fe9c8f4247c940ee2aceb\"",
+    "publishTimestamp": 1792341534,
+    "dsh": ">=0.1.7-rc.1 <=0.2.1-rc.2"
   },
   "dsh-attachments": {
     "version": "0.1.1",
@@ -4108,9 +4109,9 @@
     "publishTimestamp": 1792250656
   },
   "dsh-fast": {
-    "version": "0.2.25",
-    "etag": "W/\"569c2f192d1abd173b686381dd8fd74f\"",
-    "publishTimestamp": 1792333375,
+    "version": "0.2.26",
+    "etag": "W/\"0dab2cad31f8bd34a06ccc24e7d8f20d\"",
+    "publishTimestamp": 1792349388,
     "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
   },
   "@aiwayds/dsh-dcp": {
@@ -4176,9 +4177,9 @@
     "publishTimestamp": 1792217939
   },
   "dsh-test-drive": {
-    "version": "0.3.20",
-    "etag": "W/\"adf1edfea7d62c7aff1694f0e22381ee\"",
-    "publishTimestamp": 1792332989,
+    "version": "0.3.22",
+    "etag": "W/\"99a87e49c8eb941a80e9097fd8d8f129\"",
+    "publishTimestamp": 1792348260,
     "dsh": ">=0.2.1-0 <0.3.0"
   },
   "dsh-session-pin": {
@@ -4491,9 +4492,9 @@
     "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
   },
   "dsh-ui-ux-pro-max": {
-    "version": "1.4.0",
-    "etag": "W/\"87e4710f1a9356a219786276c0b8a1e9\"",
-    "publishTimestamp": 1792316164
+    "version": "1.4.1",
+    "etag": "W/\"1cb84b7d4177f38a0e51f095054b2f43\"",
+    "publishTimestamp": 1792341407
   },
   "dsh-code-index": {
     "version": "0.10.1",
@@ -4506,9 +4507,9 @@
     "publishTimestamp": 1786896192
   },
   "dsh-diff-approval": {
-    "version": "0.35.0",
-    "etag": "W/\"88e45c15d6bc233eff13492cbb59586c\"",
-    "publishTimestamp": 1792086591
+    "version": "0.36.0",
+    "etag": "W/\"04feaadd1a9625d7cd49cdcb62f183a9\"",
+    "publishTimestamp": 1792344207
   },
   "dsh-fail-logger": {
     "version": "0.5.2",
@@ -4579,9 +4580,9 @@
     "dsh": ">=0.1.6-alpha.1"
   },
   "dsh-model-switch": {
-    "version": "0.4.26",
-    "etag": "W/\"a13627a835c09c2ce889f0cfeb235775\"",
-    "publishTimestamp": 1792339361
+    "version": "0.4.29",
+    "etag": "W/\"8df365ff0384f06d94ae0bfd8bc3c956\"",
+    "publishTimestamp": 1792349743
   },
   "@falling-ts/dsh-force-compact": {
     "version": "0.8.4",
@@ -5011,9 +5012,9 @@
     "publishTimestamp": 1789528370
   },
   "@goodandready/dsh-voice": {
-    "version": "0.9.36",
-    "etag": "W/\"0d954d4c0d4d508c55b91f7fe3639db4\"",
-    "publishTimestamp": 1792000086
+    "version": "0.9.37",
+    "etag": "W/\"c54c7dab47009e03176f431aac7b515d\"",
+    "publishTimestamp": 1792344151
   },
   "@linenxi-ctrl/dsh-vision": {
     "version": "0.2.6",
@@ -5145,9 +5146,9 @@
     "publishTimestamp": 1787032216
   },
   "@goodandready/dsh-cron": {
-    "version": "0.3.10",
-    "etag": "W/\"d5e5ef278df0577af1f8a337d091d778\"",
-    "publishTimestamp": 1792326730
+    "version": "0.3.11",
+    "etag": "W/\"dec9429d5c5f3acd0c445b7f7ce327ff\"",
+    "publishTimestamp": 1792345519
   },
   "dsh-free-vision": {
     "version": "1.0.8",
@@ -5155,9 +5156,9 @@
     "publishTimestamp": 1787151266
   },
   "@goodandready/dsh-clinebot": {
-    "version": "0.5.30",
-    "etag": "W/\"9bca86405377fe1e12d0488d76d4c199\"",
-    "publishTimestamp": 1792326568
+    "version": "0.5.31",
+    "etag": "W/\"1559382d94f620178117a16b0e3df901\"",
+    "publishTimestamp": 1792343056
   },
   "dsh-ecc-skills": {
     "version": "0.6.1",
@@ -5233,9 +5234,9 @@
     "publishTimestamp": 1786778780
   },
   "@goodandready/dsh-key-rotation": {
-    "version": "0.8.63",
-    "etag": "W/\"f8d909b36d56c444c054c81095b02e21\"",
-    "publishTimestamp": 1792157323
+    "version": "0.8.65",
+    "etag": "W/\"c790774cbd0146d6ae4f561679a42222\"",
+    "publishTimestamp": 1792346431
   },
   "dsh-plugin-session-import": {
     "version": "0.1.1",
@@ -5707,9 +5708,9 @@
     "dsh": ">=0.1.0-rc.5"
   },
   "@goodandready/dsh-lanmode": {
-    "version": "0.8.46",
-    "etag": "W/\"6e0373368c69742e474b791815521ed5\"",
-    "publishTimestamp": 1792329499
+    "version": "0.8.48",
+    "etag": "W/\"d1b9bfd47869a653584940fcc8a84817\"",
+    "publishTimestamp": 1792347339
   },
   "@superfish058/dsh-llm-proxy": {
     "version": "1.5.0",
@@ -6489,10 +6490,10 @@
     "publishTimestamp": 1787193645
   },
   "@duke-dsh-plugins/dsh-token-stats": {
-    "version": "1.7.2",
-    "etag": "W/\"093a847e3b8762620045b6de79d20a99\"",
-    "publishTimestamp": 1790790839,
-    "dsh": ">=0.1.4-rc.2 <0.3.0"
+    "version": "1.7.3",
+    "etag": "W/\"866e8b4d78975d26ea503d323d260e80\"",
+    "publishTimestamp": 1792353538,
+    "dsh": ">=0.1.4-rc.2 <0.3.0 || ^0.2.1-rc.0"
   },
   "dsh-tiddlywiki": {
     "version": "0.30.65",
@@ -7156,9 +7157,9 @@
     "publishTimestamp": 1787309940
   },
   "dsh-ptc-cordis-preset": {
-    "version": "0.21.1",
-    "etag": "W/\"0332246cdd35a017c3bd497fa4dbed0f\"",
-    "publishTimestamp": 1792251010,
+    "version": "0.21.3",
+    "etag": "W/\"0943efd4294613b97760bfc6cab3087a\"",
+    "publishTimestamp": 1792344906,
     "dsh": ">=0.1.7-rc"
   },
   "dsh-selection-ask": {
@@ -8554,9 +8555,9 @@
     "publishTimestamp": 1789112581
   },
   "@duke-dsh-plugins/dsh-agent-approval": {
-    "version": "1.11.0",
-    "etag": "W/\"f8467b72ec0a6272d64a635017f40354\"",
-    "publishTimestamp": 1792252991
+    "version": "1.11.2",
+    "etag": "W/\"a598f135da37da9665ff6c9a370a2f9f\"",
+    "publishTimestamp": 1792353483
   },
   "dsh-ai-soul": {
     "version": "0.2.1-rc.1",
@@ -10437,9 +10438,9 @@
     "publishTimestamp": 1790409643
   },
   "@duke-dsh-plugins/dsh-archive-manager": {
-    "version": "1.5.0",
-    "etag": "W/\"bd832653087d691a75678a96d43049a8\"",
-    "publishTimestamp": 1790614960
+    "version": "1.5.1",
+    "etag": "W/\"280badabb64ba8cd112401d8f718fcfd\"",
+    "publishTimestamp": 1792353470
   },
   "dsh-multimedia-webui-input": {
     "version": "0.1.0",
@@ -10760,9 +10761,9 @@
     "publishTimestamp": 1786713889
   },
   "dsh-custom-css": {
-    "version": "0.2.2",
-    "etag": "W/\"66883edfc9b399867a7c9cb3713d8885\"",
-    "publishTimestamp": 1791884340
+    "version": "0.4.4",
+    "etag": "W/\"43daaeb71835049cfce5cb489fa784a5\"",
+    "publishTimestamp": 1792343351
   },
   "dsh-danus": {
     "version": "0.1.0",
@@ -11809,9 +11810,9 @@
     "dsh": "0.1.5-rc.2 || 0.1.5-rc.3 || 0.1.6-alpha.1 || 0.1.6-alpha.2 || 0.1.7-alpha.1 || 0.1.7-alpha.2 || 0.1.7-rc.1 || 0.1.7-rc.2 || 0.2.0-rc.1 || 0.2.0-rc.2 || 0.2.1-alpha.1 || 0.2.1-alpha.2 || 0.2.1-alpha.3 || 0.2.1-alpha.4 || 0.2.1-alpha.5 || 0.2.1-rc.1 || 0.2.1-rc.2"
   },
   "dsh-plugin-om": {
-    "version": "0.0.59",
-    "etag": "W/\"39dc5d5a20f1c08cefea770117ff2caf\"",
-    "publishTimestamp": 1792299135
+    "version": "0.0.60",
+    "etag": "W/\"d80790753a82acf52675d5120dc5b554\"",
+    "publishTimestamp": 1792343767
   },
   "@dsh-fish/hub": {
     "version": "0.4.2",
@@ -11859,9 +11860,9 @@
     "publishTimestamp": 1790731022
   },
   "dsh-plugin-thinking-api": {
-    "version": "0.1.8",
-    "etag": "W/\"9e6e3c99a9afca8c2938a7ec4b2dd627\"",
-    "publishTimestamp": 1789145275
+    "version": "0.2.1-rc.2",
+    "etag": "W/\"119f436439870eda1f5f20964ebefdd7\"",
+    "publishTimestamp": 1792341358
   },
   "dsh-plugin-sync": {
     "version": "1.0.0",
@@ -13442,9 +13443,9 @@
     "publishTimestamp": 1787282156
   },
   "@anht3889/dsh-mcp-mgmt-bundle": {
-    "version": "0.0.6",
-    "etag": "W/\"6a5a2482c37eb5e0b37a62bdf1fd3bd7\"",
-    "publishTimestamp": 1787588761
+    "version": "0.0.7",
+    "etag": "W/\"7bf97fb41836f12c074ef4d5ac0dcc10\"",
+    "publishTimestamp": 1792340975
   },
   "@georesearch/dsh-bundle": {
     "version": "0.1.0",
@@ -14237,7 +14238,7 @@
   },
   "dsh-client-ui-quote": {
     "version": "0.11.3",
-    "etag": "W/\"9e85c4f636f18121dd4a9599cfb47c72\"",
+    "etag": "W/\"8288c5858decf7bda331f149496f4e6e\"",
     "publishTimestamp": 1791780073,
     "dsh": ">=0.2.0-rc.2"
   },
@@ -15868,9 +15869,9 @@
     "publishTimestamp": 1792122599
   },
   "@eduwork/dsh-oidc": {
-    "version": "0.2.4",
-    "etag": "W/\"978b76b351f14792b0e9902213fdb775\"",
-    "publishTimestamp": 1789448409
+    "version": "0.3.0",
+    "etag": "W/\"df4858a018bcc1175d8a7df6777861ff\"",
+    "publishTimestamp": 1792346033
   },
   "@lynsucceed/dsh-openclaw-persona": {
     "version": "0.1.1",
@@ -16187,9 +16188,9 @@
     "publishTimestamp": 1786681366
   },
   "@moon16u/dsh-plugin-mcp-console": {
-    "version": "0.3.6",
-    "etag": "W/\"f6a118de83be597030ea5211777edb61\"",
-    "publishTimestamp": 1792300082,
+    "version": "0.3.7",
+    "etag": "W/\"914b1be9a15322230b1ee3bacd01ba8e\"",
+    "publishTimestamp": 1792341825,
     "dsh": ">=0.2.1-rc.1"
   },
   "dsh-plugin-observatory": {
@@ -16254,9 +16255,9 @@
     "publishTimestamp": 1789024526
   },
   "@moon16u/dsh-plugin-restart": {
-    "version": "0.4.3",
-    "etag": "W/\"f44ad8b38db653d8dbb561711fa284e5\"",
-    "publishTimestamp": 1792237622,
+    "version": "0.4.4",
+    "etag": "W/\"53a575a1ae11c7333dabbe4d296cb7cd\"",
+    "publishTimestamp": 1792341815,
     "dsh": ">=0.2.1-rc.1"
   },
   "dsh-plugin-thinking-size": {
@@ -18625,9 +18626,9 @@
     "publishTimestamp": 1792250846
   },
   "@dsh-enhanced/acp": {
-    "version": "0.1.53",
-    "etag": "W/\"0f3eef4b7e75bf2660d87c806d1d3d2a\"",
-    "publishTimestamp": 1792110689
+    "version": "0.1.54",
+    "etag": "W/\"6460fa966b7c22790561f635a7238bd5\"",
+    "publishTimestamp": 1792351206
   },
   "@huangzhaoyu/zhaoyu-restart": {
     "version": "1.0.2",
@@ -18650,9 +18651,9 @@
     "publishTimestamp": 1790088686
   },
   "@dsh-enhanced/assistant-automations": {
-    "version": "0.1.53",
-    "etag": "W/\"a36eb1bb3db7efc3205e164b913f190d\"",
-    "publishTimestamp": 1792110752
+    "version": "0.1.54",
+    "etag": "W/\"42d66ed2ce0d5752e4d7d619d82a2c54\"",
+    "publishTimestamp": 1792351248
   },
   "@dsh-external/dsh-vision-toolkit": {
     "version": "0.1.4",
@@ -18660,9 +18661,9 @@
     "publishTimestamp": 1786681193
   },
   "@dsh-enhanced/assistant-delivery": {
-    "version": "0.1.53",
-    "etag": "W/\"9c09c3dbe6f3d793aa5b50f4ed21174a\"",
-    "publishTimestamp": 1792110777
+    "version": "0.1.54",
+    "etag": "W/\"a7ae162298daeb7b0386e47f280b5e53\"",
+    "publishTimestamp": 1792351254
   },
   "auto-vision": {
     "version": "1.0.1",
@@ -18675,34 +18676,34 @@
     "publishTimestamp": 1786780243
   },
   "@dsh-enhanced/assistant-evaluation": {
-    "version": "0.1.53",
-    "etag": "W/\"154881427e2ad87741653f8f069350e1\"",
-    "publishTimestamp": 1792110773
+    "version": "0.1.54",
+    "etag": "W/\"084f93a94877537dc3af885bae5f555b\"",
+    "publishTimestamp": 1792351342
   },
   "@dsh-enhanced/assistant-evolution": {
-    "version": "0.1.53",
-    "etag": "W/\"0022cb83ace6ebdf60f54dc9fa515524\"",
-    "publishTimestamp": 1792110827
+    "version": "0.1.54",
+    "etag": "W/\"744397b80447d5c12ed10caf9fd7d9d2\"",
+    "publishTimestamp": 1792351292
   },
   "@dsh-enhanced/assistant-growth-experiments": {
-    "version": "0.1.53",
-    "etag": "W/\"b95f75b662d2bbe8d5cfce874ed0f4ca\"",
-    "publishTimestamp": 1792110740
+    "version": "0.1.54",
+    "etag": "W/\"015ba96115a8dc20ec37f53ce8f01544\"",
+    "publishTimestamp": 1792351318
   },
   "@dsh-enhanced/assistant-recovery": {
-    "version": "0.1.53",
-    "etag": "W/\"49edb637f675f23d26a9ecc7ff6cf9ea\"",
-    "publishTimestamp": 1792110878
+    "version": "0.1.54",
+    "etag": "W/\"37961ec56588b0ce280bfa388269fc65\"",
+    "publishTimestamp": 1792351396
   },
   "@dsh-enhanced/assistant-policy": {
-    "version": "0.1.53",
-    "etag": "W/\"1962ff0fdac6a0966ca727b4dbb8e97c\"",
-    "publishTimestamp": 1792110692
+    "version": "0.1.54",
+    "etag": "W/\"796594bb94295631276e296727726aa3\"",
+    "publishTimestamp": 1792351211
   },
   "@dsh-enhanced/assistant-health": {
-    "version": "0.1.53",
-    "etag": "W/\"101b0cb468deca2bdd9ece5765ddfcdb\"",
-    "publishTimestamp": 1792110820
+    "version": "0.1.54",
+    "etag": "W/\"610e3175e1c537fc56cbe37abf739ae3\"",
+    "publishTimestamp": 1792351419
   },
   "brockdsaver": {
     "version": "0.1.0",
@@ -18730,9 +18731,9 @@
     "publishTimestamp": 1787032884
   },
   "@dsh-enhanced/assistant-heartbeat": {
-    "version": "0.1.53",
-    "etag": "W/\"2d44979f2a7e2e8824c1d2df96ecf5d3\"",
-    "publishTimestamp": 1792110764
+    "version": "0.1.54",
+    "etag": "W/\"ef2e9e31644decd8ee555631400424c9\"",
+    "publishTimestamp": 1792351280
   },
   "dsh-social-plugin": {
     "version": "0.1.0",
@@ -18845,14 +18846,14 @@
     "publishTimestamp": 1786793825
   },
   "@dsh-enhanced/coding-subscription-provider": {
-    "version": "0.1.53",
-    "etag": "W/\"9afa9f3ce4624a3202db676ce6734df0\"",
-    "publishTimestamp": 1792110729
+    "version": "0.1.54",
+    "etag": "W/\"e9e5177fd1266c330d0d6d64763fe3bf\"",
+    "publishTimestamp": 1792351226
   },
   "@dsh-enhanced/credentials-keychain": {
-    "version": "0.1.53",
-    "etag": "W/\"64db73cfaa6d526cc4e87c47ab741f70\"",
-    "publishTimestamp": 1792110711
+    "version": "0.1.54",
+    "etag": "W/\"bfbd0918c0c2acd2f30a80fcac0186e8\"",
+    "publishTimestamp": 1792351207
   },
   "@lunarmoon26/dal-modes": {
     "version": "0.1.1",
@@ -21307,9 +21308,9 @@
     "publishTimestamp": 1790738979
   },
   "@eduwork/dsh-mail": {
-    "version": "0.1.2",
-    "etag": "W/\"cfee8551e4f2ad8a17a419485ba6966c\"",
-    "publishTimestamp": 1789448309
+    "version": "0.2.0",
+    "etag": "W/\"d46baf22ee700fbb6e3c5ba5fd22f56c\"",
+    "publishTimestamp": 1792346108
   },
   "dsh-mcp-proxy": {
     "version": "0.1.0",
@@ -24020,9 +24021,9 @@
     "publishTimestamp": 1788946167
   },
   "@dsh-enhanced/event-triggers": {
-    "version": "0.1.53",
-    "etag": "W/\"226e75aaef5b033f8f22b4c489ea6c1f\"",
-    "publishTimestamp": 1792110799
+    "version": "0.1.54",
+    "etag": "W/\"4a06d6f02c3fe50075304017bac283af\"",
+    "publishTimestamp": 1792351244
   },
   "@starpivot/dsh-enter-newline": {
     "version": "0.2.0",
@@ -24100,9 +24101,9 @@
     "publishTimestamp": 1786981555
   },
   "@dsh-enhanced/hello": {
-    "version": "0.1.53",
-    "etag": "W/\"f8da04a1c0be1ef8eef81109b25e4e7e\"",
-    "publishTimestamp": 1792110768
+    "version": "0.1.54",
+    "etag": "W/\"eab4f6595c26768edfcb981f659ae4cf\"",
+    "publishTimestamp": 1792351344
   },
   "jolly-dsh-vision": {
     "version": "0.1.0",
@@ -24165,9 +24166,9 @@
     "publishTimestamp": 1787621956
   },
   "@dsh-enhanced/lark-channel": {
-    "version": "0.1.53",
-    "etag": "W/\"d2989d947761cdb71949bcff0cacb258\"",
-    "publishTimestamp": 1792110835
+    "version": "0.1.54",
+    "etag": "W/\"5ae3e0bcdfdf4984904b7b83c5320864\"",
+    "publishTimestamp": 1792351330
   },
   "mc-hud": {
     "version": "1.0.2",
@@ -24240,9 +24241,9 @@
     "publishTimestamp": 1787487757
   },
   "@dsh-enhanced/memory-wiki-bridge": {
-    "version": "0.1.53",
-    "etag": "W/\"b51b8e8fe5acfe0fea15d47450cf680e\"",
-    "publishTimestamp": 1792110789
+    "version": "0.1.54",
+    "etag": "W/\"3413ad3d7874c50913be25dcec703865\"",
+    "publishTimestamp": 1792351347
   },
   "dsh-notemd": {
     "version": "0.1.1",
@@ -24316,7 +24317,7 @@
   },
   "@perseus-computing/dsh": {
     "version": "0.1.1",
-    "etag": "W/\"8fa27ae466a3c0041bd6db59fa619430\"",
+    "etag": "W/\"3c8a8a4e591e18683fc93af9f37ced20\"",
     "publishTimestamp": 1786905813
   },
   "dsh-ciel": {
@@ -24340,9 +24341,9 @@
     "publishTimestamp": 1788058429
   },
   "@dsh-enhanced/personal-assistant": {
-    "version": "0.1.53",
-    "etag": "W/\"4f0748105954880929dc61eedbdb215d\"",
-    "publishTimestamp": 1792110791
+    "version": "0.1.54",
+    "etag": "W/\"4d407aa4455be72b140181c3835902b7\"",
+    "publishTimestamp": 1792351328
   },
   "@tangzai/dsh-ui-archive-manager": {
     "version": "0.1.1",
@@ -24350,9 +24351,9 @@
     "publishTimestamp": 1787124836
   },
   "@dsh-enhanced/personal-wiki": {
-    "version": "0.1.53",
-    "etag": "W/\"84a54b98703f7dc2b64cf3f1cc7c0061\"",
-    "publishTimestamp": 1792110799
+    "version": "0.1.54",
+    "etag": "W/\"a91c3015fad1c0630a396151b10e6694\"",
+    "publishTimestamp": 1792351274
   },
   "dsh-desktop-windows-launcher": {
     "version": "0.1.0",
@@ -24380,9 +24381,9 @@
     "publishTimestamp": 1786884959
   },
   "@dsh-enhanced/personal-memory": {
-    "version": "0.1.53",
-    "etag": "W/\"2d521ca885eec6a57624b0b5617bcd82\"",
-    "publishTimestamp": 1792110796
+    "version": "0.1.54",
+    "etag": "W/\"7d929bb45a3173249f03e590dcf399e4\"",
+    "publishTimestamp": 1792351292
   },
   "rein-scene-forge-dsh-plugin": {
     "version": "0.1.0",
@@ -24405,9 +24406,9 @@
     "publishTimestamp": 1789462410
   },
   "@dsh-enhanced/plugin-control-plane": {
-    "version": "0.1.53",
-    "etag": "W/\"fd814c8cf8665be6a9c36b92298997ad\"",
-    "publishTimestamp": 1792110788
+    "version": "0.1.54",
+    "etag": "W/\"da3597e5ffdaaaa611fd4b974383c9d5\"",
+    "publishTimestamp": 1792351264
   },
   "relay-dsh-plugin-monitor-time": {
     "version": "0.1.2",
@@ -24455,9 +24456,9 @@
     "publishTimestamp": 1788435326
   },
   "@dsh-enhanced/preference-learning": {
-    "version": "0.1.53",
-    "etag": "W/\"626219cfe6e990a7e783914f3eabc6e4\"",
-    "publishTimestamp": 1792110794
+    "version": "0.1.54",
+    "etag": "W/\"e000fba21bb2403c5805cb57ecb3d81e\"",
+    "publishTimestamp": 1792351311
   },
   "@starpivot/dsh-restart-continue": {
     "version": "0.1.0",
@@ -24580,9 +24581,9 @@
     "publishTimestamp": 1790088666
   },
   "@dsh-enhanced/traex-acp-provider": {
-    "version": "0.1.53",
-    "etag": "W/\"1864f66bd435e24ed9a28c40a0640fe7\"",
-    "publishTimestamp": 1792110735
+    "version": "0.1.54",
+    "etag": "W/\"25308c2f7fc2c23f3682895e210e161d\"",
+    "publishTimestamp": 1792351231
   },
   "@dfy-plugins/dsh-turn-guard": {
     "version": "0.1.3",
@@ -24608,5 +24609,10 @@
     "version": "0.2.0",
     "etag": "W/\"20798f1644a19996cf60d8e40a6fc7ad\"",
     "publishTimestamp": 1787068412
+  },
+  "dsh-peak": {
+    "version": "0.2.0",
+    "etag": "W/\"b827defa17089044ae2ec397ed206ef0\"",
+    "publishTimestamp": 1792338971
   }
 }
