@@ -1,0 +1,1821 @@
+{
+  "@wxg-prc-cpg/browser-skill-dsh-plugin": {
+    "version": "0.3.3",
+    "publishTimestamp": 1792032829
+  },
+  "@tt-a1i/archify-dsh": {
+    "version": "1.0.0",
+    "publishTimestamp": 1791133803
+  },
+  "dsh-plugin-reactive-resume": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787078598
+  },
+  "dsh-plugin-desktop": {
+    "version": "2.0.0",
+    "publishTimestamp": 1786882403
+  },
+  "@openviking/dsh-memory-plugin": {
+    "version": "0.5.26",
+    "publishTimestamp": 1792064187
+  },
+  "@vectorize-io/hindsight-coding-agents": {
+    "version": "0.8.1",
+    "publishTimestamp": 1791809139
+  },
+  "@linxin666/dsh-doctor": {
+    "version": "0.3.24",
+    "publishTimestamp": 1789908776
+  },
+  "@linxin666/dsh-client-ui-community-plugins": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792237628
+  },
+  "@linxin666/dsh-client-ui-git-graph": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792244904
+  },
+  "@linxin666/dsh-i18n": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792244977
+  },
+  "@linxin666/dsh-client-ui-market": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792244908
+  },
+  "@linxin666/dsh-liangshen": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792244907
+  },
+  "@memtensor/memos-local-plugin": {
+    "version": "2.0.20",
+    "publishTimestamp": 1789990482
+  },
+  "@linxin666/dsh-pet": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792237956
+  },
+  "@linxin666/dsh-client-ui-plugin-manager": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792244952
+  },
+  "@linxin666/dsh-session-archive": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792244959
+  },
+  "@linxin666/dsh-remote-web-ui": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792244936
+  },
+  "@linxin666/dsh-client-ui-skill-explorer": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792244922
+  },
+  "@linxin666/dsh-ssh": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792245119
+  },
+  "@linxin666/dsh-client-ui-session-id": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792244920
+  },
+  "@wxg-prc-cpg/dsh-weknora": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787288542
+  },
+  "@linxin666/dsh-web-all": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792244962
+  },
+  "@linxin666/dsh-tool-describe-image": {
+    "version": "0.3.24",
+    "publishTimestamp": 1789908779
+  },
+  "@linxin666/dsh-usage": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792245005
+  },
+  "@linxin666/dsh-client-ui-web-ui-settings": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792244936
+  },
+  "@linxin666/dsh-client-ui-task-board": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792244946
+  },
+  "deepseek-idesign": {
+    "version": "0.2.2",
+    "publishTimestamp": 1786807231
+  },
+  "deepseek-ivideo": {
+    "version": "0.1.0",
+    "publishTimestamp": 1786819556
+  },
+  "@linxin666/dsh-client-ui-skin-center": {
+    "version": "0.4.7",
+    "publishTimestamp": 1792237757
+  },
+  "dsh-whale-widget": {
+    "version": "0.4.2",
+    "publishTimestamp": 1791721632
+  },
+  "deepseek-ippt": {
+    "version": "0.1.2",
+    "publishTimestamp": 1786807252
+  },
+  "dsh-better-sidebar": {
+    "version": "0.28.0",
+    "publishTimestamp": 1792218651
+  },
+  "@liustack/modlens": {
+    "version": "3.27.1",
+    "publishTimestamp": 1792092100
+  },
+  "@agentscope-ai/reme": {
+    "version": "0.1.2",
+    "publishTimestamp": 1788266038
+  },
+  "dsh-tauri": {
+    "version": "0.6.7",
+    "publishTimestamp": 1788155525
+  },
+  "dsh-tauri-panel": {
+    "version": "0.6.7",
+    "publishTimestamp": 1788155531
+  },
+  "dsh-tauri-panel-placeholder": {
+    "version": "0.0.0",
+    "publishTimestamp": 1787752122
+  },
+  "dsh-tauri-panel-extension": {
+    "version": "0.6.7",
+    "publishTimestamp": 1788155537
+  },
+  "@struktoai/mirage-dsh": {
+    "version": "0.0.6",
+    "publishTimestamp": 1788452388
+  },
+  "@deepseek-harness-tui/dsh-tui": {
+    "version": "0.16.1",
+    "publishTimestamp": 1792273292
+  },
+  "dsh-tauri-session": {
+    "version": "0.6.7",
+    "publishTimestamp": 1788155548
+  },
+  "dsh-tauri-worktree": {
+    "version": "0.6.7",
+    "publishTimestamp": 1788155560
+  },
+  "dsh-tauri-ui": {
+    "version": "0.6.7",
+    "publishTimestamp": 1788155681
+  },
+  "dsh-tauri-rightclick": {
+    "version": "0.6.7",
+    "publishTimestamp": 1788155542
+  },
+  "@nanmicoder/dsh-agent-teams": {
+    "version": "0.1.25",
+    "publishTimestamp": 1792295657
+  },
+  "dsh-context": {
+    "version": "0.73.1",
+    "publishTimestamp": 1792308522,
+    "dsh": ">=0.1.7-rc.2 || >=0.2.0-rc.2"
+  },
+  "dsh-pocket": {
+    "version": "2.12.0",
+    "publishTimestamp": 1792230597
+  },
+  "@xmanrui/dsh-im": {
+    "version": "5.1.0",
+    "publishTimestamp": 1792309470
+  },
+  "@zilliz/memsearch-dsh": {
+    "version": "0.1.6",
+    "publishTimestamp": 1791546878
+  },
+  "dsh-plugin-wallpaper-engine": {
+    "version": "1.3.3",
+    "publishTimestamp": 1792056438,
+    "dsh": ">=0.1.5-rc.1"
+  },
+  "dsh-pet": {
+    "version": "0.3.7",
+    "publishTimestamp": 1791941130
+  },
+  "@ethanyoq/dsh-ai-novel-writer": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787334255
+  },
+  "@open-pets/dsh": {
+    "version": "4.0.0",
+    "publishTimestamp": 1789927177
+  },
+  "dsh-deja": {
+    "version": "0.22.2",
+    "publishTimestamp": 1792253287
+  },
+  "dsh-workbuddy-connect": {
+    "version": "0.7.8",
+    "publishTimestamp": 1792240879
+  },
+  "@mem9/dsh-plugin": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787134941
+  },
+  "dsh-vision-router": {
+    "version": "3.0.4",
+    "publishTimestamp": 1792167944,
+    "dsh": ">=0.1.5-rc.1 <0.2.0-0 || >=0.2.0-rc.2 <0.3.0-0"
+  },
+  "@cloudbase/dsh-plugin": {
+    "version": "0.2.3",
+    "publishTimestamp": 1790752598
+  },
+  "@agentrq/dsh-plugin-agentrq": {
+    "version": "0.2.8",
+    "publishTimestamp": 1791873993
+  },
+  "dsh-tongflow": {
+    "version": "0.8.4",
+    "publishTimestamp": 1791260653,
+    "dsh": "^0.1.2-rc.0 || ^0.1.3-alpha.0 || ^0.1.5-alpha.0 || ^0.1.7-alpha.0 || ^0.2.0-rc.0 || ^0.2.1-alpha.0"
+  },
+  "dsh-image-gen": {
+    "version": "0.9.1",
+    "publishTimestamp": 1792058048
+  },
+  "@jingyun-ai/jingyun-dsh": {
+    "version": "0.1.1",
+    "publishTimestamp": 1788007681
+  },
+  "@anionex/dsh-vision-toolkit": {
+    "version": "0.1.47",
+    "publishTimestamp": 1792291311
+  },
+  "@linxin666/dsh-client-ui-aionui-panel": {
+    "version": "0.3.6",
+    "publishTimestamp": 1787836020
+  },
+  "@linxin666/dsh-client-ui-skin-qq98": {
+    "version": "0.1.20",
+    "publishTimestamp": 1786945544
+  },
+  "@linxin666/dsh-web-ui-all": {
+    "version": "0.3.6",
+    "publishTimestamp": 1787836065
+  },
+  "@linxin666/dsh-client-ui-skin-ths": {
+    "version": "0.1.20",
+    "publishTimestamp": 1786945550
+  },
+  "@linxin666/dsh-skins": {
+    "version": "0.2.9",
+    "publishTimestamp": 1787391166
+  },
+  "@linxin666/dsh-client-ui-skin-qq2006": {
+    "version": "0.1.15",
+    "publishTimestamp": 1786779124
+  },
+  "@linxin666/dsh-live-stats": {
+    "version": "0.1.20",
+    "publishTimestamp": 1786945513
+  },
+  "dsh-undo-savepoint": {
+    "version": "0.4.10",
+    "publishTimestamp": 1791031697,
+    "dsh": ">=0.0.1-0 || >=0.1.0-rc.2 || >=0.1.1-rc.1 || >=0.1.2-alpha.2 || >=0.1.2-rc.1 || >=0.1.5-rc.1 || >=0.1.5-rc.2 || >=0.2.0-rc.1"
+  },
+  "@liustack/modsearch": {
+    "version": "5.10.9",
+    "publishTimestamp": 1792311858
+  },
+  "dshmarketplace-plugin": {
+    "version": "0.2.0",
+    "publishTimestamp": 1791188544
+  },
+  "billion-context-dsh": {
+    "version": "0.2.27",
+    "publishTimestamp": 1791454193
+  },
+  "dsh-reasoning-effort": {
+    "version": "0.2.8",
+    "publishTimestamp": 1789536050
+  },
+  "@vlln/dsh-navbar": {
+    "version": "0.4.0",
+    "publishTimestamp": 1787797799,
+    "dsh": ">=0.1.0-rc.5"
+  },
+  "@deepseek-ai/dsh-acp-app": {
+    "version": "0.1.2-alpha.2",
+    "publishTimestamp": 1788098278
+  },
+  "dsh-session-manager": {
+    "version": "0.7.2",
+    "publishTimestamp": 1792240723
+  },
+  "dsh-synapse": {
+    "version": "0.4.2",
+    "publishTimestamp": 1791177314
+  },
+  "dsh-plugin-shop": {
+    "version": "0.8.7",
+    "publishTimestamp": 1792066681
+  },
+  "@deepseek-ai/dsh-experimental-agent-team-profile": {
+    "version": "0.1.5-alpha.2",
+    "publishTimestamp": 1788964930
+  },
+  "@deepseek-ai/dsh-base": {
+    "version": "0.0.1-rc.1",
+    "publishTimestamp": 1786390679
+  },
+  "@deepseek-ai/dsh-headless": {
+    "version": "0.0.1-rc.1",
+    "publishTimestamp": 1786390693
+  },
+  "@deepseek-ai/dsh-sdk-app": {
+    "version": "0.1.2-alpha.2",
+    "publishTimestamp": 1788098742
+  },
+  "dsh-working-activity": {
+    "version": "0.5.1",
+    "publishTimestamp": 1790457876
+  },
+  "dsh-thoughtdag": {
+    "version": "0.5.19",
+    "publishTimestamp": 1791968050
+  },
+  "@deepseek-ai/dsh-web-app": {
+    "version": "0.0.1-rc.1",
+    "publishTimestamp": 1786390868
+  },
+  "@deepseek-ai/dsh-sdk-minimal": {
+    "version": "0.1.2-alpha.2",
+    "publishTimestamp": 1788098767
+  },
+  "@deepseek-ai/dsh-experimental-agent-team-web-profile": {
+    "version": "0.1.5-alpha.2",
+    "publishTimestamp": 1788964939
+  },
+  "@changfenhuang/dsh-genui": {
+    "version": "0.13.0",
+    "publishTimestamp": 1792253293,
+    "dsh": "^0.2.0-rc.1 || ^0.2.1-rc.1"
+  },
+  "@avernet-plugin/deepseek-harness-channel-bcn": {
+    "version": "0.2.0",
+    "publishTimestamp": 1792142526
+  },
+  "dsh-mnemon-strategy-light-context": {
+    "version": "0.5.6",
+    "publishTimestamp": 1792265775
+  },
+  "dsh-mnemon": {
+    "version": "0.5.32",
+    "publishTimestamp": 1792265958,
+    "dsh": ">=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-rc.1 <0.3.0-0"
+  },
+  "dsh-mnemon-strategy-scoped": {
+    "version": "0.5.5",
+    "publishTimestamp": 1790529174
+  },
+  "dsh-univer-office": {
+    "version": "0.3.7",
+    "publishTimestamp": 1791449118
+  },
+  "@howmp/dsh-pentest": {
+    "version": "0.1.0-rc.37",
+    "publishTimestamp": 1791540692
+  },
+  "dsh-mimir": {
+    "version": "0.21.1",
+    "publishTimestamp": 1791793959
+  },
+  "@ethanyoq/dsh-invoice-downloader": {
+    "version": "0.1.1",
+    "publishTimestamp": 1787462556
+  },
+  "@anysearch/anysearch-dsh": {
+    "version": "0.1.8",
+    "publishTimestamp": 1791622568
+  },
+  "@oh-story/dsh": {
+    "version": "0.1.16",
+    "publishTimestamp": 1792139935,
+    "dsh": ">=0.2.0-rc.2 <0.2.1-0 || >=0.2.1-alpha.1 <0.2.2-0"
+  },
+  "dsh-mnemon-strategy-auto-capture": {
+    "version": "0.5.5",
+    "publishTimestamp": 1790529098
+  },
+  "@k8e-sandbox/dsh-k8e-sandbox-bundle": {
+    "version": "0.3.9",
+    "publishTimestamp": 1787408352
+  },
+  "dsh-mobile": {
+    "version": "0.6.12",
+    "publishTimestamp": 1792301741
+  },
+  "@vibeinging/dsh-canvas-tools": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787134121
+  },
+  "@vibeinging/dsh-model-inheritance": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787134382
+  },
+  "@vibeinging/dsh-project-tools": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787133998
+  },
+  "@vibeinging/dsh-product-bridge": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787134508
+  },
+  "@vibeinging/dsh-office-tools": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787136409
+  },
+  "@vibeinging/dsh-structured-ui-tools": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787134258
+  },
+  "@vibeinging/dsh-work-references": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787136420
+  },
+  "dsh-free-search": {
+    "version": "0.9.4",
+    "publishTimestamp": 1792307946
+  },
+  "dsh-dafeiyu": {
+    "version": "0.1.18",
+    "publishTimestamp": 1791611945
+  },
+  "open-sea-skin": {
+    "version": "1.2.5",
+    "publishTimestamp": 1791652495
+  },
+  "@furongjun1999/dsh-memory": {
+    "version": "0.8.1",
+    "publishTimestamp": 1791324345
+  },
+  "dsh-cost-meter": {
+    "version": "1.9.4",
+    "publishTimestamp": 1792314176,
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "@vibeinging/dsh-work-product-host-ipc": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787133875
+  },
+  "dsh-slides": {
+    "version": "0.2.0",
+    "publishTimestamp": 1786929370
+  },
+  "dsh-plugin-subscriptions": {
+    "version": "0.9.9",
+    "publishTimestamp": 1791505671
+  },
+  "@dsh-plugin-hub/dsh-plugin": {
+    "version": "0.5.0",
+    "publishTimestamp": 1789803111
+  },
+  "dsh-code-review": {
+    "version": "0.1.2",
+    "publishTimestamp": 1790507937
+  },
+  "@mars-sea/dsh-commandcode-provider": {
+    "version": "0.14.1",
+    "publishTimestamp": 1792291533,
+    "dsh": "0.2.0-rc.2 || 0.2.1-rc.2"
+  },
+  "whale-girl": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787158008
+  },
+  "ds-harness-remote": {
+    "version": "0.5.12",
+    "publishTimestamp": 1792305247
+  },
+  "@zseven-w/dsh-ios": {
+    "version": "0.1.0-rc.10",
+    "publishTimestamp": 1789354555
+  },
+  "@zhaoolee/dsh-notes": {
+    "version": "0.1.2",
+    "publishTimestamp": 1786799513
+  },
+  "@dshtrading/all": {
+    "version": "0.6.1",
+    "publishTimestamp": 1791556059
+  },
+  "@huiliyi37/dsh-tianshu-tui": {
+    "version": "1.0.0-rc.2",
+    "publishTimestamp": 1790766731
+  },
+  "@shengsheng/dsh-taskboard": {
+    "version": "0.1.9",
+    "publishTimestamp": 1791876907
+  },
+  "@dshtrading/base": {
+    "version": "0.6.1",
+    "publishTimestamp": 1791556053
+  },
+  "@dshtrading/crypto": {
+    "version": "0.6.1",
+    "publishTimestamp": 1791556077
+  },
+  "@dhicoc/dsh-reverse-skill": {
+    "version": "1.0.5",
+    "publishTimestamp": 1787388214
+  },
+  "dsh-client-liang-intensity-skin": {
+    "version": "0.1.6",
+    "publishTimestamp": 1787153773
+  },
+  "dsh-damage-pulse": {
+    "version": "4.2.6",
+    "publishTimestamp": 1792229620
+  },
+  "@dshtrading/hk": {
+    "version": "0.6.1",
+    "publishTimestamp": 1791556304
+  },
+  "@dshtrading/us": {
+    "version": "0.6.1",
+    "publishTimestamp": 1791556155
+  },
+  "dsh-ego-browser": {
+    "version": "0.8.6",
+    "publishTimestamp": 1790608320
+  },
+  "@dshtrading/cn": {
+    "version": "0.6.1",
+    "publishTimestamp": 1791556173
+  },
+  "@opencode2dsh/dsh-plugin": {
+    "version": "0.3.12",
+    "publishTimestamp": 1791945471
+  },
+  "dsh-dream-skin": {
+    "version": "10.16.0",
+    "publishTimestamp": 1792128485
+  },
+  "dsh-plugin": {
+    "version": "2.0.3",
+    "publishTimestamp": 1792281681
+  },
+  "dsh-meme": {
+    "version": "0.1.52",
+    "publishTimestamp": 1791800644
+  },
+  "dsh-chat-import": {
+    "version": "0.26.1",
+    "publishTimestamp": 1792241036
+  },
+  "dsh-auto-review": {
+    "version": "0.13.2",
+    "publishTimestamp": 1792300498,
+    "dsh": ">=0.2.1-0 <0.3.0"
+  },
+  "dsh-work-x": {
+    "version": "0.5.0",
+    "publishTimestamp": 1791896848
+  },
+  "pi2dsh": {
+    "version": "0.26.0",
+    "publishTimestamp": 1791900071
+  },
+  "dsh-industry-research": {
+    "version": "0.3.21",
+    "publishTimestamp": 1792315640,
+    "dsh": ">=0.2.1-0 <0.3.0"
+  },
+  "dsh-popout-sidebar": {
+    "version": "1.0.1",
+    "publishTimestamp": 1787244889
+  },
+  "dsh-research-report": {
+    "version": "0.3.23",
+    "publishTimestamp": 1792316538,
+    "dsh": ">=0.1.6-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+  },
+  "dsh-skill-mcp-panel": {
+    "version": "2.1.5",
+    "publishTimestamp": 1790807037
+  },
+  "dsh-tokenledger": {
+    "version": "0.1.0",
+    "publishTimestamp": 1786798698
+  },
+  "dsh-skin-market": {
+    "version": "0.1.63",
+    "publishTimestamp": 1792228854
+  },
+  "meow-memory": {
+    "version": "0.31.0",
+    "publishTimestamp": 1791452740
+  },
+  "@graysilver/dsh-evolve-modes": {
+    "version": "0.4.1",
+    "publishTimestamp": 1789403633
+  },
+  "@yejiming/dsh-data-agent": {
+    "version": "0.2.2",
+    "publishTimestamp": 1790682835
+  },
+  "seektty": {
+    "version": "1.3.0",
+    "publishTimestamp": 1791871831
+  },
+  "dsh-engramory": {
+    "version": "0.2.5",
+    "publishTimestamp": 1790219338
+  },
+  "dsh-config-manager": {
+    "version": "0.1.78",
+    "publishTimestamp": 1792263568
+  },
+  "@michengai/dsh-skills-manager": {
+    "version": "1.2.6",
+    "publishTimestamp": 1792294492
+  },
+  "dsh-find-plugin": {
+    "version": "0.4.0",
+    "publishTimestamp": 1790348384
+  },
+  "dsh-fylar-office-editor": {
+    "version": "0.1.2",
+    "publishTimestamp": 1788866092
+  },
+  "@wenbin_wb/dsh-bridge": {
+    "version": "2.14.2",
+    "publishTimestamp": 1792214859
+  },
+  "dsh-git-memory": {
+    "version": "0.8.1",
+    "publishTimestamp": 1787537703
+  },
+  "dsh-plugin-marketplace": {
+    "version": "0.5.5",
+    "publishTimestamp": 1792232130,
+    "dsh": ">=0.2.0-rc.2 <0.3.0 || 0.2.1-rc.1 || 0.2.1-rc.2"
+  },
+  "dsh-codex-subscription": {
+    "version": "3.0.1",
+    "publishTimestamp": 1792303188
+  },
+  "@zseven-w/dsh-openpencil": {
+    "version": "0.1.0-rc.13",
+    "publishTimestamp": 1791320605
+  },
+  "dsh-usage-panel": {
+    "version": "0.2.3",
+    "publishTimestamp": 1789437731
+  },
+  "@cocofhu/anime-find": {
+    "version": "0.1.12",
+    "publishTimestamp": 1787156972
+  },
+  "@rain-kl/dsh-preset-plus": {
+    "version": "0.1.5",
+    "publishTimestamp": 1787806586
+  },
+  "@ychris12138/dsh-usage-stats": {
+    "version": "0.3.5",
+    "publishTimestamp": 1790863592
+  },
+  "dsh-lowtide": {
+    "version": "0.2.8",
+    "publishTimestamp": 1792249571
+  },
+  "dsh-plugin-bridge": {
+    "version": "0.5.0",
+    "publishTimestamp": 1792288787,
+    "dsh": ">=0.1.0-rc.7 <0.2.0-0 || 0.2.0-rc.2 || >=0.2.1-alpha.1 <0.2.2-0"
+  },
+  "@zseven-w/dsh-crew": {
+    "version": "0.1.0-rc.14",
+    "publishTimestamp": 1791458249
+  },
+  "@zseven-w/dsh-android": {
+    "version": "0.1.0-rc.12",
+    "publishTimestamp": 1791452147
+  },
+  "@nanmicoder/dsh-auto-mode": {
+    "version": "0.2.0",
+    "publishTimestamp": 1790690501
+  },
+  "@dsh-std/adapter-dsh": {
+    "version": "0.1.1-rc.2",
+    "publishTimestamp": 1788175414
+  },
+  "@michengai/dsh-codex-ui": {
+    "version": "1.1.42",
+    "publishTimestamp": 1792259990
+  },
+  "@michengai/dsh-codex-suite": {
+    "version": "0.1.16",
+    "publishTimestamp": 1787664483
+  },
+  "dsh-mattpocock-skills-deck": {
+    "version": "1.9.0-beta.4",
+    "publishTimestamp": 1792256562,
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "@dsh-market/plugin": {
+    "version": "0.4.15",
+    "publishTimestamp": 1792303006
+  },
+  "@michengai/dsh-archive-manager": {
+    "version": "1.1.1",
+    "publishTimestamp": 1792293967
+  },
+  "dsh-remote-web-gateway": {
+    "version": "0.2.2",
+    "publishTimestamp": 1787913105
+  },
+  "dsh-connect-workbuddy": {
+    "version": "4.8.1",
+    "publishTimestamp": 1792281989
+  },
+  "dsh-status-rotator": {
+    "version": "0.37.0",
+    "publishTimestamp": 1792216774
+  },
+  "@changfenhuang/dsh-annotation": {
+    "version": "1.4.11",
+    "publishTimestamp": 1790841213
+  },
+  "dsh-codex-connect": {
+    "version": "0.2.0-alpha.1",
+    "publishTimestamp": 1790778989
+  },
+  "@volcengine/ark-managed-agents": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787738308
+  },
+  "dsh-theme-endfield": {
+    "version": "1.2.3",
+    "publishTimestamp": 1792241729
+  },
+  "dsh-web-mobile": {
+    "version": "3.1.0",
+    "publishTimestamp": 1791904801
+  },
+  "dsh-rewind-plugin": {
+    "version": "0.16.0",
+    "publishTimestamp": 1792220348,
+    "dsh": ">=0.2.1-rc.1 <0.3.0-0"
+  },
+  "dsh-client-auto-continue": {
+    "version": "0.14.2",
+    "publishTimestamp": 1791394037
+  },
+  "dsh-memento": {
+    "version": "0.5.27",
+    "publishTimestamp": 1792315881,
+    "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+  },
+  "@tencent-connect/dsh-qqbot": {
+    "version": "0.5.2",
+    "publishTimestamp": 1791788671
+  },
+  "dsh-remote": {
+    "version": "0.8.46",
+    "publishTimestamp": 1792128279
+  },
+  "@volcengine/ark-plan-api": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787738246
+  },
+  "@modusensus/dsh-mneme": {
+    "version": "0.9.0",
+    "publishTimestamp": 1792193553
+  },
+  "@icelily/dsh-gitbash-preset": {
+    "version": "0.1.2",
+    "publishTimestamp": 1786903954
+  },
+  "@michengai/dsh-agency-agents": {
+    "version": "1.2.1",
+    "publishTimestamp": 1792250015
+  },
+  "@anionex/dsh-turn-rewind": {
+    "version": "0.3.10",
+    "publishTimestamp": 1792290534
+  },
+  "@a9i5k4/dsh-auto-memory": {
+    "version": "3.3.6",
+    "publishTimestamp": 1792303899
+  },
+  "@zseven-w/dsh-noema": {
+    "version": "0.1.0-rc.6",
+    "publishTimestamp": 1791260402
+  },
+  "dsh-permission-rules": {
+    "version": "0.7.15",
+    "publishTimestamp": 1791595989,
+    "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+  },
+  "@fangqian616/dsh-consensus-pipeline": {
+    "version": "0.2.0",
+    "publishTimestamp": 1788605044
+  },
+  "dsh-recall-unread": {
+    "version": "1.2.0",
+    "publishTimestamp": 1791019254
+  },
+  "dsh-easyrewrite": {
+    "version": "2.6.0",
+    "publishTimestamp": 1790267201
+  },
+  "dsh-usage": {
+    "version": "0.2.5",
+    "publishTimestamp": 1787698894
+  },
+  "dsh-win32": {
+    "version": "0.17.14",
+    "publishTimestamp": 1790260622
+  },
+  "stratagate-dsh": {
+    "version": "0.3.17",
+    "publishTimestamp": 1792237384,
+    "dsh": "0.1.2-rc.1 || >=0.1.5-rc.1 <0.3.0-0"
+  },
+  "dsh-builtin-browser": {
+    "version": "0.4.13",
+    "publishTimestamp": 1792236028,
+    "dsh": ">=0.1.1-rc.2 <0.3.0"
+  },
+  "dsh-connect-trae": {
+    "version": "3.9.2",
+    "publishTimestamp": 1792282524
+  },
+  "dsh-personal-center": {
+    "version": "1.1.2",
+    "publishTimestamp": 1790580949
+  },
+  "odai-dsh-agent": {
+    "version": "0.2.53",
+    "publishTimestamp": 1792056761
+  },
+  "odai-dsh-plugin": {
+    "version": "0.2.53",
+    "publishTimestamp": 1792056547
+  },
+  "dsh-workbuddy-xdpool": {
+    "version": "2.0.1",
+    "publishTimestamp": 1792112680,
+    "dsh": ">=0.1.5-rc.1 <0.3.0"
+  },
+  "dsh-watcher": {
+    "version": "0.8.0",
+    "publishTimestamp": 1791424357
+  },
+  "jacky-creator": {
+    "version": "0.1.0-beta.9",
+    "publishTimestamp": 1791524811,
+    "dsh": "0.2.0-rc.2"
+  },
+  "dsh-comfyui": {
+    "version": "0.5.5",
+    "publishTimestamp": 1792290235,
+    "dsh": ">=0.1.2-alpha.4 <0.3.0-0"
+  },
+  "@dickpy/dsh-imagegen": {
+    "version": "1.8.0",
+    "publishTimestamp": 1792299217
+  },
+  "dsh-video-lens": {
+    "version": "0.3.2",
+    "publishTimestamp": 1789750081
+  },
+  "dsh-agy-link": {
+    "version": "0.4.59",
+    "publishTimestamp": 1792172921
+  },
+  "dsh-tabbit": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791800262
+  },
+  "dsh-plugin-genui": {
+    "version": "0.15.1",
+    "publishTimestamp": 1790238784
+  },
+  "dsh-network-settings": {
+    "version": "0.3.3",
+    "publishTimestamp": 1787321899
+  },
+  "@sanqi-normal/dsh-webui-market-plugin": {
+    "version": "0.5.5",
+    "publishTimestamp": 1787028194
+  },
+  "superpowers-dsh": {
+    "version": "0.3.0",
+    "publishTimestamp": 1792039936
+  },
+  "dsh-run2skill": {
+    "version": "0.5.0-alpha.4",
+    "publishTimestamp": 1790871243
+  },
+  "dsh-project-brain": {
+    "version": "1.3.0",
+    "publishTimestamp": 1789483486
+  },
+  "dsh-turn-delete": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787014935
+  },
+  "dsh-strata": {
+    "version": "0.12.1",
+    "publishTimestamp": 1789112941
+  },
+  "@noob-stupid/dsh-plugin-console": {
+    "version": "0.5.77",
+    "publishTimestamp": 1792304211
+  },
+  "dsh-remote-control": {
+    "version": "2.0.21",
+    "publishTimestamp": 1791414381
+  },
+  "dsh-github": {
+    "version": "0.1.0",
+    "publishTimestamp": 1786692451
+  },
+  "dsh-approval-gate": {
+    "version": "0.5.0",
+    "publishTimestamp": 1787027852
+  },
+  "dsh-deepcanary": {
+    "version": "0.1.4-rc.1",
+    "publishTimestamp": 1790886709
+  },
+  "local-shell-mcp-dsh": {
+    "version": "5.1.4",
+    "publishTimestamp": 1792224212
+  },
+  "dsh-prompt-enhancer": {
+    "version": "1.2.2",
+    "publishTimestamp": 1792295272
+  },
+  "beauticode-dsh": {
+    "version": "1.0.30",
+    "publishTimestamp": 1791713732
+  },
+  "dsh-notification": {
+    "version": "0.1.2",
+    "publishTimestamp": 1790319617
+  },
+  "@daweifu/capability-menu": {
+    "version": "0.1.6",
+    "publishTimestamp": 1792179812
+  },
+  "dsh-wsl-workspace": {
+    "version": "0.7.7",
+    "publishTimestamp": 1791784693
+  },
+  "dsh-stock-watch": {
+    "version": "1.1.0",
+    "publishTimestamp": 1787797314
+  },
+  "dsh-secure-audit": {
+    "version": "0.2.12",
+    "publishTimestamp": 1791727152
+  },
+  "dsh-codex": {
+    "version": "0.3.2",
+    "publishTimestamp": 1790653379
+  },
+  "gongwen-skill": {
+    "version": "2.15.0",
+    "publishTimestamp": 1790876134
+  },
+  "dsh-smooth-stream": {
+    "version": "0.7.0",
+    "publishTimestamp": 1791171262
+  },
+  "dsh-maze": {
+    "version": "2.4.0",
+    "publishTimestamp": 1791450828
+  },
+  "deepseek-flow": {
+    "version": "0.4.0",
+    "publishTimestamp": 1786964278
+  },
+  "dsh-plugin-mobile-gateway": {
+    "version": "0.10.3",
+    "publishTimestamp": 1792241106
+  },
+  "dsh-mcp-panel": {
+    "version": "0.6.26",
+    "publishTimestamp": 1792315858,
+    "dsh": ">=0.1.2-rc.1 <0.2.0 || >=0.1.5-alpha.1 <0.2.0 || >=0.1.6-0 <0.2.0 || >=0.1.7-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+  },
+  "@kenz1117/dsh-ui-usage-billing": {
+    "version": "1.5.1",
+    "publishTimestamp": 1792292952,
+    "dsh": ">=0.1.2-alpha.1"
+  },
+  "dsh-web-search-pro": {
+    "version": "0.2.1",
+    "publishTimestamp": 1791387812
+  },
+  "dsh-omi-voice": {
+    "version": "0.1.2",
+    "publishTimestamp": 1787627812
+  },
+  "dsh-knowledge": {
+    "version": "0.5.2",
+    "publishTimestamp": 1791639129
+  },
+  "dsh-opencontext": {
+    "version": "0.4.0",
+    "publishTimestamp": 1789962423
+  },
+  "@openma/deepseek-harness-tui": {
+    "version": "0.2.20",
+    "publishTimestamp": 1787401307
+  },
+  "deepseek-harness-wallet": {
+    "version": "0.3.13",
+    "publishTimestamp": 1788922944
+  },
+  "dsh-plugins-store": {
+    "version": "0.1.4",
+    "publishTimestamp": 1791794294
+  },
+  "@wm-coders/dsh-custom-first-control-prompt": {
+    "version": "0.3.0",
+    "publishTimestamp": 1788262564
+  },
+  "dsh-passwords": {
+    "version": "2.7.8",
+    "publishTimestamp": 1791575812
+  },
+  "@wxkingstar/specfusion-dsh": {
+    "version": "0.1.1",
+    "publishTimestamp": 1786900600
+  },
+  "@raullenchai/dsh-provider": {
+    "version": "0.3.0",
+    "publishTimestamp": 1787168088
+  },
+  "@wowyuarm/dsh-agent-team": {
+    "version": "0.2.1",
+    "publishTimestamp": 1791289009
+  },
+  "dsh-fund-research": {
+    "version": "0.4.24",
+    "publishTimestamp": 1792315547,
+    "dsh": ">=0.2.1-0 <0.3.0"
+  },
+  "@opencues/dsh": {
+    "version": "0.2.21",
+    "publishTimestamp": 1788819739
+  },
+  "dsh-agentdebugx": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787663372
+  },
+  "dsh-web-plugin-manager": {
+    "version": "0.6.3",
+    "publishTimestamp": 1789242971
+  },
+  "huaweicloud-devkit": {
+    "version": "1.1.8",
+    "publishTimestamp": 1791810168
+  },
+  "dsh-taskboard": {
+    "version": "0.9.1",
+    "publishTimestamp": 1792163110
+  },
+  "dsh-auto-collapse": {
+    "version": "0.2.1",
+    "publishTimestamp": 1788783269
+  },
+  "@axiaohungry/dsh-llm-workbuddy": {
+    "version": "1.3.21",
+    "publishTimestamp": 1791450326
+  },
+  "@nonamelego/dsh-catppuccin": {
+    "version": "0.6.2",
+    "publishTimestamp": 1791882411
+  },
+  "meow-smooth": {
+    "version": "0.8.1",
+    "publishTimestamp": 1790128278
+  },
+  "dsh-balance-plugin": {
+    "version": "0.2.3",
+    "publishTimestamp": 1790754415
+  },
+  "@michengai/dsh-im-connect": {
+    "version": "1.0.2",
+    "publishTimestamp": 1792305177
+  },
+  "@mstar-harness/dsh": {
+    "version": "4.0.2",
+    "publishTimestamp": 1792299285
+  },
+  "@zenx0x/allinflash": {
+    "version": "0.2.0",
+    "publishTimestamp": 1786671689
+  },
+  "@opdsh/unity-plugin": {
+    "version": "0.1.7",
+    "publishTimestamp": 1790563282
+  },
+  "dsh-opencode-palette": {
+    "version": "2.1.3",
+    "publishTimestamp": 1792253272,
+    "dsh": ">=0.2.0-rc.1"
+  },
+  "@dsh-suite/all": {
+    "version": "0.2.0",
+    "publishTimestamp": 1787368234
+  },
+  "@beforewave/dsh-with-chatgpt": {
+    "version": "0.1.4",
+    "publishTimestamp": 1789024150
+  },
+  "@dsh-suite/plugin-manager": {
+    "version": "0.8.7",
+    "publishTimestamp": 1788240154
+  },
+  "@dsh-suite/plugin-notify": {
+    "version": "0.2.0",
+    "publishTimestamp": 1786875479
+  },
+  "@xgone/dsh-remote": {
+    "version": "0.3.5",
+    "publishTimestamp": 1790672544
+  },
+  "@dsh-suite/plugin-session-export": {
+    "version": "0.2.0",
+    "publishTimestamp": 1786874147
+  },
+  "@anionex/dsh-computer-use": {
+    "version": "0.3.4",
+    "publishTimestamp": 1792290490
+  },
+  "@dsh-suite/plugin-team-board": {
+    "version": "0.2.1",
+    "publishTimestamp": 1788053805
+  },
+  "dsh-deepread": {
+    "version": "1.0.1",
+    "publishTimestamp": 1788973621
+  },
+  "@dsh-suite/preset-center": {
+    "version": "0.2.0",
+    "publishTimestamp": 1786874295
+  },
+  "@dsh-suite/plugin-deus": {
+    "version": "0.4.1",
+    "publishTimestamp": 1788056859
+  },
+  "dsh-lark-channel": {
+    "version": "0.0.7",
+    "publishTimestamp": 1787130196
+  },
+  "dsh-plugin-tether": {
+    "version": "0.1.21",
+    "publishTimestamp": 1791775994
+  },
+  "dsh-agy": {
+    "version": "0.4.6",
+    "publishTimestamp": 1791607821
+  },
+  "dsh-better-reasoning-effort": {
+    "version": "0.5.3",
+    "publishTimestamp": 1791915023
+  },
+  "@vlln/plugin-console": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787158055
+  },
+  "dsh-sandbox-escalation-fix": {
+    "version": "0.1.6-alpha2-win-linux",
+    "publishTimestamp": 1789666283
+  },
+  "@eddyskywalker/dsh-chatgpt-subscription": {
+    "version": "0.27.1",
+    "publishTimestamp": 1792297908
+  },
+  "deepseek-pet": {
+    "version": "0.2.0",
+    "publishTimestamp": 1787207291
+  },
+  "dsh-notifier": {
+    "version": "0.13.1",
+    "publishTimestamp": 1790434489
+  },
+  "dsh-doublecheck": {
+    "version": "0.9.26",
+    "publishTimestamp": 1792306599,
+    "dsh": ">=0.1.6-0 <0.2.0 || >=0.2.0-0 <0.3.0 || >=0.2.1-0 <0.3.0"
+  },
+  "dsh-token-pet": {
+    "version": "0.4.2",
+    "publishTimestamp": 1789986403
+  },
+  "@dhicoc/dsh-chinese-traditional-wisdom-skill": {
+    "version": "1.3.0",
+    "publishTimestamp": 1791455130
+  },
+  "@huanlin/dsh-plugin-better-sidebar-plugin-office": {
+    "version": "0.2.0",
+    "publishTimestamp": 1788521119
+  },
+  "dsh-remote-ui": {
+    "version": "0.6.5",
+    "publishTimestamp": 1789335533,
+    "dsh": ">=0.1.0-rc.6 <0.2.0-0"
+  },
+  "dsh-plugin-yolo": {
+    "version": "0.5.0",
+    "publishTimestamp": 1789057190
+  },
+  "dsh-web-startup-auth": {
+    "version": "0.1.13",
+    "publishTimestamp": 1792231747
+  },
+  "cordis-plugin-sofagent-audit": {
+    "version": "1.6.0",
+    "publishTimestamp": 1792080980
+  },
+  "dsh-data-quality": {
+    "version": "0.3.22",
+    "publishTimestamp": 1792312084,
+    "dsh": ">=0.2.1-0 <0.3.0"
+  },
+  "dsh-pet-remielle": {
+    "version": "0.4.6",
+    "publishTimestamp": 1791704625
+  },
+  "cordis-plugin-sofagent-daemon": {
+    "version": "1.6.0",
+    "publishTimestamp": 1792080985
+  },
+  "cordis-plugin-sofagent-rollback": {
+    "version": "1.6.0",
+    "publishTimestamp": 1792080979
+  },
+  "cordis-plugin-sofagent-fde": {
+    "version": "1.6.0",
+    "publishTimestamp": 1792081347
+  },
+  "cordis-plugin-sofagent-inject": {
+    "version": "1.6.0",
+    "publishTimestamp": 1792081046
+  },
+  "dsh-message-edit": {
+    "version": "0.2.3",
+    "publishTimestamp": 1786880003
+  },
+  "dsh-mcp-connector": {
+    "version": "0.2.75",
+    "publishTimestamp": 1792207162
+  },
+  "dsh-pentester": {
+    "version": "6.5.0",
+    "publishTimestamp": 1791954218,
+    "dsh": ">=0.2.0-rc.1 <0.3.0"
+  },
+  "dsh-sidebar-qa": {
+    "version": "1.2.0",
+    "publishTimestamp": 1792068313,
+    "dsh": ">=0.1.7-alpha.1"
+  },
+  "cordis-plugin-sofagent-evolve": {
+    "version": "1.6.0",
+    "publishTimestamp": 1792081071
+  },
+  "ax-feishu-bridge": {
+    "version": "0.4.9",
+    "publishTimestamp": 1787838333
+  },
+  "dsh-computer-use": {
+    "version": "0.3.1",
+    "publishTimestamp": 1789012232
+  },
+  "dsh-plugin-guide": {
+    "version": "0.3.35",
+    "publishTimestamp": 1792316238,
+    "dsh": ">=0.2.1-0 <0.3.0"
+  },
+  "prts-terrarchive": {
+    "version": "0.2.2",
+    "publishTimestamp": 1791032878
+  },
+  "dsh-quant": {
+    "version": "0.90.0",
+    "publishTimestamp": 1787456147
+  },
+  "dsh-im-gateway": {
+    "version": "0.3.1",
+    "publishTimestamp": 1787196264
+  },
+  "dsh-session-workbench": {
+    "version": "1.0.3",
+    "publishTimestamp": 1790580910
+  },
+  "@hyzyn/dsh-codegraph": {
+    "version": "0.6.10",
+    "publishTimestamp": 1792254435
+  },
+  "@hyzyn/dsh-plugin-kit": {
+    "version": "0.1.56",
+    "publishTimestamp": 1792254477
+  },
+  "dsh-nested-followups": {
+    "version": "0.2.2",
+    "publishTimestamp": 1787539767
+  },
+  "@hyzyn/dsh-all": {
+    "version": "0.1.62",
+    "publishTimestamp": 1792254455
+  },
+  "dsh-hacker-news": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787043978
+  },
+  "@hytime/dsh-thinking-effort": {
+    "version": "0.3.10",
+    "publishTimestamp": 1791986267,
+    "dsh": ">=0.1.0-rc.7"
+  },
+  "@hyzyn/dsh-hello": {
+    "version": "0.1.2",
+    "publishTimestamp": 1787998955
+  },
+  "@hyzyn/dsh-env": {
+    "version": "0.3.10",
+    "publishTimestamp": 1792254479
+  },
+  "@hyzyn/dsh-mcp": {
+    "version": "0.3.6",
+    "publishTimestamp": 1792254541
+  },
+  "@hyzyn/dsh-prompt": {
+    "version": "0.2.9",
+    "publishTimestamp": 1792254443
+  },
+  "@hyzyn/dsh-profile": {
+    "version": "0.2.9",
+    "publishTimestamp": 1792254483
+  },
+  "@hyzyn/dsh-rss": {
+    "version": "0.4.9",
+    "publishTimestamp": 1792254466
+  },
+  "@tnnevol/dsh-codebuddy": {
+    "version": "0.2.1-rc.2.1",
+    "publishTimestamp": 1792296272
+  },
+  "@hyzyn/dsh-search": {
+    "version": "0.4.9",
+    "publishTimestamp": 1792254448
+  },
+  "@tnnevol/dsh-codex-auth": {
+    "version": "0.2.1-rc.2.1",
+    "publishTimestamp": 1792296454
+  },
+  "@tnnevol/dsh-fnos": {
+    "version": "0.2.1-rc.2.1",
+    "publishTimestamp": 1792296244
+  },
+  "@hyzyn/dsh-tty": {
+    "version": "0.32.3",
+    "publishTimestamp": 1792254453
+  },
+  "dsh-bottom-info-bar": {
+    "version": "1.21.8",
+    "publishTimestamp": 1792222591
+  },
+  "@tnnevol/dsh-semi-ui-showcase": {
+    "version": "0.2.1-rc.2.1",
+    "publishTimestamp": 1792296286
+  },
+  "dsh-full-remote": {
+    "version": "0.3.7",
+    "publishTimestamp": 1787313183
+  },
+  "dsh-tavern": {
+    "version": "2.7.19",
+    "publishTimestamp": 1792251260
+  },
+  "dsh-emoji": {
+    "version": "0.3.6",
+    "publishTimestamp": 1790687857
+  },
+  "meow-cachebilling": {
+    "version": "0.8.0",
+    "publishTimestamp": 1791344811
+  },
+  "dsh-timeline": {
+    "version": "0.1.5",
+    "publishTimestamp": 1789056387
+  },
+  "dsh-blender": {
+    "version": "0.2.3",
+    "publishTimestamp": 1791776699
+  },
+  "dsh-plugin-writing-guard": {
+    "version": "2.0.1",
+    "publishTimestamp": 1788525376
+  },
+  "dsh-sticky-note": {
+    "version": "1.0.0",
+    "publishTimestamp": 1787383684
+  },
+  "@huanlin/dsh-plugin-mineru": {
+    "version": "0.4.2",
+    "publishTimestamp": 1792307557
+  },
+  "dsh-qa-skills": {
+    "version": "0.6.0",
+    "publishTimestamp": 1787826549
+  },
+  "dsh-computer-use-win": {
+    "version": "0.4.1",
+    "publishTimestamp": 1792000960
+  },
+  "dsh-design-qa": {
+    "version": "0.1.4",
+    "publishTimestamp": 1787200225
+  },
+  "dsh-model-tier": {
+    "version": "0.1.0",
+    "publishTimestamp": 1787046689
+  },
+  "dsh-science": {
+    "version": "0.2.0",
+    "publishTimestamp": 1787046692
+  },
+  "@yunxii/dsh-client-ui-skin-maid-whale-webui": {
+    "version": "0.1.1",
+    "publishTimestamp": 1788361113
+  },
+  "@taptap/dsh-maker": {
+    "version": "0.1.1",
+    "publishTimestamp": 1787715080
+  },
+  "dsh-any-background": {
+    "version": "0.3.8",
+    "publishTimestamp": 1792250267,
+    "dsh": "0.2.0-rc.1 || 0.2.0-rc.2 || 0.2.1-alpha.1 || 0.2.1-alpha.2 || 0.2.1-alpha.3 || 0.2.1-alpha.4 || 0.2.1-alpha.5 || 0.2.1-rc.1 || 0.2.1-rc.2 || >=0.2.0-rc.1"
+  },
+  "dsh-desktop-pet": {
+    "version": "0.2.0",
+    "publishTimestamp": 1789102322
+  },
+  "dsh-file-review": {
+    "version": "0.8.10",
+    "publishTimestamp": 1792229835,
+    "dsh": ">=0.2.1-rc.1 <0.2.2-0"
+  },
+  "dsh-code": {
+    "version": "2.0.0",
+    "publishTimestamp": 1790687117
+  },
+  "dsh-remote-plugin": {
+    "version": "0.8.0-rc.3",
+    "publishTimestamp": 1792241328
+  },
+  "dsh-filesnap": {
+    "version": "0.4.0",
+    "publishTimestamp": 1789096232
+  },
+  "@captain1275/dsh-client-ui-skin-aurora": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421490
+  },
+  "dsh-kimino-theme": {
+    "version": "68.1.0",
+    "publishTimestamp": 1791250541
+  },
+  "@captain1275/dsh-client-ui-skin-dragon-heir": {
+    "version": "0.4.1",
+    "publishTimestamp": 1791422634
+  },
+  "@captain1275/dsh-client-ui-skin-blue-fantasy": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421548
+  },
+  "@captain1275/dsh-client-ui-aionui-panel": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421191
+  },
+  "@captain1275/dsh-full-stats": {
+    "version": "0.4.4",
+    "publishTimestamp": 1791435709
+  },
+  "@captain1275/dsh-client-ui-git-graph": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421547
+  },
+  "dsh-plugin-guard": {
+    "version": "0.1.1",
+    "publishTimestamp": 1788531873
+  },
+  "@limuyang2/dsh-agent-team": {
+    "version": "0.1.4",
+    "publishTimestamp": 1787726412
+  },
+  "@captain1275/dsh-pet": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791422008
+  },
+  "@captain1275/dsh-live-stats": {
+    "version": "0.4.1",
+    "publishTimestamp": 1791425605
+  },
+  "dsh-prompt": {
+    "version": "0.4.34",
+    "publishTimestamp": 1792304751
+  },
+  "@captain1275/dsh-skins": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421995
+  },
+  "@captain1275/dsh-ssh": {
+    "version": "0.4.1",
+    "publishTimestamp": 1791435819
+  },
+  "@captain1275/dsh-web-ui-all": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791422031
+  },
+  "@captain1275/dsh-client-ui-skin-miku": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421646
+  },
+  "@captain1275/dsh-client-ui-task-board": {
+    "version": "0.4.1",
+    "publishTimestamp": 1791435733
+  },
+  "@captain1275/dsh-client-ui-skin-center": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421418
+  },
+  "@captain1275/dsh-client-ui-skin-trading": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421476
+  },
+  "@captain1275/dsh-usage-dashboard": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421998
+  },
+  "@captain1275/dsh-client-ui-web-ui-settings": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421888
+  },
+  "@captain1275/dsh-client-ui-skin-minecraft": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421457
+  },
+  "@captain1275/dsh-client-ui-skin-ths": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421473
+  },
+  "@captain1275/dsh-client-ui-skin-xp": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791421685
+  },
+  "@openma/deepseek-harness-acp": {
+    "version": "0.4.39",
+    "publishTimestamp": 1792247832,
+    "dsh": ">=0.1.7-rc.2"
+  },
+  "dsh-lark-link": {
+    "version": "0.6.0",
+    "publishTimestamp": 1792266396
+  },
+  "@captain1275/dsh-client-ui-skin-whale-song": {
+    "version": "0.4.0",
+    "publishTimestamp": 1791422427
+  },
+  "@ha-na-bi/dsh-client-ui-custom": {
+    "version": "0.1.0-rc.5",
+    "publishTimestamp": 1786926046
+  },
+  "dsh-recall-plugin": {
+    "version": "2.4.15",
+    "publishTimestamp": 1792303240
+  },
+  "@jiyr0119/dsh-workspace-explorer": {
+    "version": "0.10.0",
+    "publishTimestamp": 1791945910
+  },
+  "@kirkchinese/dsh-citeciter": {
+    "version": "0.9.0-beta.2",
+    "publishTimestamp": 1791995100
+  },
+  "@dsh-tui/dsh-tui": {
+    "version": "0.1.2",
+    "publishTimestamp": 1786674189
+  },
+  "dsh-web-lan-access": {
+    "version": "1.3.2",
+    "publishTimestamp": 1789023926
+  },
+  "dsh-better-deepseek": {
+    "version": "0.1.0",
+    "publishTimestamp": 1786717378
+  },
+  "dsh-better-edit": {
+    "version": "1.0.0",
+    "publishTimestamp": 1790517330
+  },
+  "@dsh-trading/bundle": {
+    "version": "0.2.0",
+    "publishTimestamp": 1787147667
+  },
+  "dsh-lark-bot": {
+    "version": "0.19.16",
+    "publishTimestamp": 1787673567
+  },
+  "dsh-gitbash-shell": {
+    "version": "0.40.5",
+    "publishTimestamp": 1792274619,
+    "dsh": ">=0.1.7-rc"
+  },
+  "dsh-share": {
+    "version": "0.5.0",
+    "publishTimestamp": 1791623791
+  },
+  "dsh-think-translate": {
+    "version": "1.2.12",
+    "publishTimestamp": 1792256648,
+    "dsh": ">=0.1.0-rc.6"
+  },
+  "@dely0/dsh-personal-workbench": {
+    "version": "1.16.5",
+    "publishTimestamp": 1791204716
+  },
+  "dsh-zotero": {
+    "version": "0.12.1",
+    "publishTimestamp": 1790883369,
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "deepseek-harness-zh_pro": {
+    "version": "0.9.6",
+    "publishTimestamp": 1791023868
+  },
+  "dsh-ultramath": {
+    "version": "0.6.3",
+    "publishTimestamp": 1787574473
+  },
+  "@feiyang666/dsh-usage-plugin": {
+    "version": "1.18.0",
+    "publishTimestamp": 1790259692
+  },
+  "dsh-vibe-math": {
+    "version": "2.8.5",
+    "publishTimestamp": 1791196118,
+    "dsh": ">=0.1.2-alpha.4 <0.1.3-0 || >=0.1.3-alpha.2 <0.1.5-0 || >=0.1.5-alpha.1 <0.1.6-0 || >=0.1.6-alpha.1 <0.1.7-0 || >=0.1.7-alpha.1 <0.2.0-0 || >=0.2.0-alpha.1 <0.3.0-0"
+  },
+  "@zaofan/dsh-qqbot": {
+    "version": "1.10.10",
+    "publishTimestamp": 1792197102
+  },
+  "picturereader": {
+    "version": "3.3.3",
+    "publishTimestamp": 1789127308
+  },
+  "dsh-voice-scribe": {
+    "version": "0.5.2",
+    "publishTimestamp": 1791727105
+  },
+  "@caob23/dsh-browser-control": {
+    "version": "1.0.17",
+    "publishTimestamp": 1791888695
+  },
+  "dsh-save-money": {
+    "version": "1.4.4",
+    "publishTimestamp": 1787434721
+  },
+  "dsh-memoir": {
+    "version": "0.9.2",
+    "publishTimestamp": 1791544608
+  },
+  "dsh-skill-picker": {
+    "version": "0.5.28",
+    "publishTimestamp": 1790919742
+  },
+  "dsh-interconnect": {
+    "version": "0.11.24",
+    "publishTimestamp": 1790242847
+  },
+  "dsh-ssh-ops": {
+    "version": "0.3.22",
+    "publishTimestamp": 1792134678
+  },
+  "dsh-whale-galgame": {
+    "version": "0.4.1",
+    "publishTimestamp": 1789471416
+  },
+  "@cerbur/clutch-dsh-title": {
+    "version": "0.1.7",
+    "publishTimestamp": 1792258537
+  },
+  "@goodandready/dsh-russian-lang": {
+    "version": "0.3.48",
+    "publishTimestamp": 1792143029,
+    "dsh": "^0.2.0-rc.2"
+  },
+  "@cerbur/clutch-dsh-fireworks": {
+    "version": "0.1.4",
+    "publishTimestamp": 1790483873
+  },
+  "dsh-lark-bridge": {
+    "version": "0.1.0",
+    "publishTimestamp": 1786713845
+  },
+  "dsh-ai4scholar": {
+    "version": "0.3.7",
+    "publishTimestamp": 1789098590
+  },
+  "dsh-workbench-plugin": {
+    "version": "0.1.37",
+    "publishTimestamp": 1789606960
+  },
+  "dsh-mobile-compat": {
+    "version": "0.5.0",
+    "publishTimestamp": 1790833594,
+    "dsh": ">=0.2.0-rc.2 <0.2.1"
+  },
+  "@cerbur/clutch-dsh-worktree": {
+    "version": "0.1.18",
+    "publishTimestamp": 1791954321
+  },
+  "dsh-model-context-catalog": {
+    "version": "0.4.3",
+    "publishTimestamp": 1791779548
+  },
+  "dsh-theme-firefly": {
+    "version": "0.1.3",
+    "publishTimestamp": 1787856314
+  },
+  "@xuxchloris/dsh-sdr": {
+    "version": "0.2.3",
+    "publishTimestamp": 1787933538
+  },
+  "deep-read-summarize": {
+    "version": "0.3.14",
+    "publishTimestamp": 1792247123,
+    "dsh": ">=0.1.0-rc.6"
+  },
+  "dsh-web-ui-notify": {
+    "version": "0.1.7",
+    "publishTimestamp": 1792248975
+  },
+  "@mofeng2223/dsh-claude-provider": {
+    "version": "0.6.1",
+    "publishTimestamp": 1792228106
+  },
+  "@yejiming/dsh-gomoku": {
+    "version": "0.0.3",
+    "publishTimestamp": 1791039903
+  },
+  "@agi-fans/oh-my-dsh": {
+    "version": "0.20.0",
+    "publishTimestamp": 1791513500
+  },
+  "dsh-whale-report": {
+    "version": "0.6.1",
+    "publishTimestamp": 1788411772
+  },
+  "dsh-wallpaper_share": {
+    "version": "26.10.13-D",
+    "publishTimestamp": 1791828105
+  },
+  "@zhangfengshun/dsh-remote-ssh": {
+    "version": "2.4.33",
+    "publishTimestamp": 1792238588
+  },
+  "dsh-chat-timeline": {
+    "version": "0.1.5",
+    "publishTimestamp": 1787738169
+  },
+  "dsh-live2d-pets": {
+    "version": "0.3.0",
+    "publishTimestamp": 1790239338
+  },
+  "dsh-office-tools": {
+    "version": "1.0.6",
+    "publishTimestamp": 1791875546
+  },
+  "@weibaohui/skills-management": {
+    "version": "0.9.1",
+    "publishTimestamp": 1791361002,
+    "dsh": ">=0.1.7-rc.2"
+  }
+}
